@@ -1,0 +1,207 @@
+# IronLedger exercise library
+
+The exercise names in the IronLedger app's library (app v1.10.1). Use these exact names in a program file and they import silently; the match ignores case and punctuation, so "pull up" and "Pull Up" are the same.
+
+A name that is close to one of these (for example "Barbell Rows" for Barbell Row) makes the app ask "Did you mean ...?" on import. A name that is not close to any of them imports as a new custom exercise with no history.
+
+- Bench Press
+- Incline Bench Press
+- Decline Bench Press
+- Close Grip Bench Press
+- Floor Press
+- Larsen Press
+- Spoto Press
+- Paused Bench Press
+- Dumbbell Bench Press
+- Dumbbell Incline Press
+- Dumbbell Decline Press
+- Dumbbell Fly
+- Incline Dumbbell Fly
+- Dumbbell Pullover
+- Cable Fly
+- Cable Crossover
+- Low to High Cable Fly
+- High to Low Cable Fly
+- Machine Chest Press
+- Pec Deck
+- Smith Machine Bench Press
+- Push Up
+- Incline Push Up
+- Decline Push Up
+- Diamond Push Up
+- Dips
+- Chest Dips
+- Deadlift
+- Conventional Deadlift
+- Sumo Deadlift
+- Romanian Deadlift
+- Stiff Leg Deadlift
+- Deficit Deadlift
+- Block Pull
+- Rack Pull
+- Barbell Row
+- Pendlay Row
+- Yates Row
+- T-Bar Row
+- Barbell Shrug
+- Dumbbell Row
+- Dumbbell Romanian Deadlift
+- Dumbbell Shrug
+- Kroc Row
+- Dumbbell Pullover (Back Focus)
+- Seal Row
+- Lat Pulldown
+- Wide Grip Lat Pulldown
+- Close Grip Lat Pulldown
+- Neutral Grip Lat Pulldown
+- Straight Arm Pulldown
+- Seated Cable Row
+- Face Pull
+- Machine Row
+- Chest Supported Row
+- Pull Up
+- Chin Up
+- Neutral Grip Pull Up
+- Wide Grip Pull Up
+- Inverted Row
+- Back Extension
+- Hyperextension
+- Overhead Press
+- Military Press
+- Push Press
+- Behind Neck Press
+- Seated Overhead Press
+- Barbell Front Raise
+- Upright Row
+- Dumbbell Shoulder Press
+- Seated Dumbbell Press
+- Arnold Press
+- Lateral Raise
+- Front Raise
+- Rear Delt Fly
+- Dumbbell Upright Row
+- Lu Raise
+- Cable Lateral Raise
+- Cable Front Raise
+- Cable Rear Delt Fly
+- Machine Shoulder Press
+- Machine Lateral Raise
+- Reverse Pec Deck
+- Smith Machine Overhead Press
+- Barbell Curl
+- EZ Bar Curl
+- Preacher Curl
+- Drag Curl
+- Dumbbell Curl
+- Hammer Curl
+- Incline Dumbbell Curl
+- Concentration Curl
+- Spider Curl
+- Cable Curl
+- Cable Hammer Curl
+- Machine Curl
+- Machine Preacher Curl
+- Skull Crusher
+- JM Press
+- Dumbbell Tricep Extension
+- Overhead Tricep Extension
+- Tricep Kickback
+- Cable Tricep Pushdown
+- Rope Pushdown
+- Overhead Cable Extension
+- Tricep Dips
+- Bench Dips
+- Machine Tricep Extension
+- Wrist Curl
+- Reverse Wrist Curl
+- Barbell Wrist Curl
+- Reverse Curl
+- Farmer's Walk
+- Squat
+- Back Squat
+- Front Squat
+- High Bar Squat
+- Low Bar Squat
+- Pause Squat
+- Tempo Squat
+- Box Squat
+- Safety Bar Squat
+- Barbell Lunge
+- Walking Lunge
+- Goblet Squat
+- Dumbbell Lunge
+- Dumbbell Split Squat
+- Bulgarian Split Squat
+- Dumbbell Step Up
+- Kettlebell Squat
+- Leg Press
+- Hack Squat
+- Leg Extension
+- Smith Machine Squat
+- Pendulum Squat
+- Belt Squat
+- Bodyweight Squat
+- Pistol Squat
+- Sissy Squat
+- Leg Curl
+- Lying Leg Curl
+- Seated Leg Curl
+- Nordic Curl
+- Good Morning
+- Glute Ham Raise
+- Hip Thrust
+- Barbell Glute Bridge
+- Dumbbell Hip Thrust
+- Cable Pull Through
+- Cable Kickback
+- Hip Abduction Machine
+- Hip Adduction Machine
+- Glute Bridge
+- Single Leg Glute Bridge
+- Frog Pump
+- Kickback
+- Standing Calf Raise
+- Seated Calf Raise
+- Leg Press Calf Raise
+- Dumbbell Calf Raise
+- Smith Machine Calf Raise
+- Bodyweight Calf Raise
+- Plank
+- Side Plank
+- Crunch
+- Sit Up
+- Leg Raise
+- Hanging Leg Raise
+- Hanging Knee Raise
+- Ab Wheel Rollout
+- Cable Crunch
+- Cable Woodchop
+- Russian Twist
+- Bicycle Crunch
+- Dead Bug
+- Mountain Climber
+- Pallof Press
+- Decline Crunch
+- Clean
+- Power Clean
+- Hang Clean
+- Snatch
+- Power Snatch
+- Clean and Jerk
+- Thruster
+- Dumbbell Thruster
+- Kettlebell Swing
+- Kettlebell Snatch
+- Kettlebell Clean
+- Turkish Get Up
+- Burpee
+- Man Maker
+- Treadmill
+- Stationary Bike
+- Rowing Machine
+- Elliptical
+- Stair Climber
+- Jump Rope
+- Battle Ropes
+- Sled Push
+- Sled Pull

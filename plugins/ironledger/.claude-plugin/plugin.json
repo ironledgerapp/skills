@@ -1,0 +1,13 @@
+{
+  "name": "ironledger",
+  "description": "Strength calculators, a program writer that checks files with the IronLedger app's import rules, and a training review from IronLedger exports. Connects the free IronLedger MCP server (no account or key).",
+  "version": "1.0.0",
+  "author": {
+    "name": "IronLedger",
+    "url": "https://www.ironledger.app"
+  },
+  "homepage": "https://www.ironledger.app/ai",
+  "repository": "https://github.com/ironledgerapp/skills",
+  "license": "MIT",
+  "keywords": ["strength training", "powerlifting", "one rep max", "RPE", "workout program", "IronLedger"]
+}

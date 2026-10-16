@@ -1,0 +1,15 @@
+{
+  "name": "ironledger",
+  "description": "Free strength training skills and tools from IronLedger: calculators, program files the IronLedger app imports, and training reviews from the app's exports.",
+  "owner": {
+    "name": "IronLedger",
+    "url": "https://www.ironledger.app"
+  },
+  "plugins": [
+    {
+      "name": "ironledger",
+      "source": "./plugins/ironledger",
+      "description": "Strength calculators, a program writer that checks files with the app's import rules, and a training review from IronLedger exports. Connects the free IronLedger MCP server."
+    }
+  ]
+}
