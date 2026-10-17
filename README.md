@@ -7,6 +7,8 @@ Free Agent Skills for strength training from [IronLedger](https://www.ironledger
 | `ironledger-strength-calculators` | One-rep max, RPE loads, plates per side, warm-up sets, and DOTS, IPF GL and Wilks scores, using IronLedger's calculators |
 | `ironledger-program-writer` | Writes a training program as a file the IronLedger app imports, then checks it with the app's own import rules before handing it over |
 | `ironledger-training-review` | Reviews training from IronLedger's own exports (History CSV or JSON backup): progress on each lift, records, volume and consistency |
+| `ironledger-meet-attempts` | Plans opener, second and third attempts for a powerlifting meet from recent training, using the IPF and USAPL rules and published coaching ranges, with plates, warm-ups and DOTS or IPF GL for each plan |
+| `ironledger-deload-planner` | Plans a deload week from the published deload research and coaching guidance, and writes it into an IronLedger program file checked with the app's import rules |
 
 ## Install
 
@@ -33,7 +35,11 @@ They can't read or change anyone's IronLedger account. The MCP server only calcu
 
 The program writer follows the IronLedger program file format, documented with a free checker at https://www.ironledger.app/tools/program-file-checker. Ready-made program files for Texas Method, GZCLP and nSuns 5/3/1 LP, built from your own numbers, are at https://www.ironledger.app/programs.
 
-IronLedger isn't affiliated with the creators of the programs these skills mention. Programs are credited to their creators.
+## Sources
+
+The meet attempt and deload skills only use rules and numbers from published sources: federation rulebooks, coaches' own writing and peer-reviewed studies. Each has a `references/sources.md` with the quotes and links. Attempt selection and deload timing are judgement calls, and the skills say so.
+
+IronLedger isn't affiliated with the creators of the programs, the coaches or the federations these skills mention. Programs are credited to their creators.
 
 ## Licence
 
