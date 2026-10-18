@@ -1,0 +1,603 @@
+{
+  "schema": "designer-template/1",
+  "id": "531-club",
+  "name": "5/3/1 for club rugby, off-season and pre-season",
+  "engine": "531",
+  "client_types": [
+    "RGO"
+  ],
+  "default_days": 3,
+  "rules": [
+    "CT-RGO-1",
+    "CT-RGO-2",
+    "CT-RGO-3",
+    "CT-RGO-4",
+    "CT-RGO-5",
+    "CT-RGO-7",
+    "CT-RGO-11",
+    "CT-RGO-12",
+    "CT-RGO-13",
+    "CT-RGO-14",
+    "CT-RGO-15",
+    "L-5",
+    "L-6",
+    "L-7",
+    "L-8",
+    "L-14",
+    "L-16",
+    "W-1"
+  ],
+  "decisions_relied_on": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M11",
+    "M12",
+    "M13",
+    "M16",
+    "M19",
+    "M20"
+  ],
+  "equipment_required": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "equipment_ceiling": [
+    "barbell",
+    "rack",
+    "bench",
+    "dumbbell",
+    "dip_bars",
+    "bodyweight",
+    "none"
+  ],
+  "equipment_ceiling_source": "CT-RGO-15: a basic club gym: barbells, racks, benches, dumbbells and a dip attachment, with no machines, cables or pull-up bar. The library has no trap-bar, landmine or band exercises. The lifter's own equipment list narrows it further (G-15).",
+  "weeks": [
+    {
+      "week": 1,
+      "kind": "loading",
+      "wave": 1
+    },
+    {
+      "week": 2,
+      "kind": "loading",
+      "wave": 2
+    },
+    {
+      "week": 3,
+      "kind": "loading",
+      "wave": 3
+    },
+    {
+      "week": 4,
+      "kind": "deload"
+    }
+  ],
+  "rest": {
+    "main": "Rest 3 min",
+    "main_heavy": "Rest 3-5 min",
+    "supplemental": "Rest 2 min"
+  },
+  "amrap": {
+    "rir": "2-3",
+    "cue": "as many strong reps as you can, leaving 2 in the tank"
+  },
+  "benchmark": {
+    "require_logged": true,
+    "set_reps": "3",
+    "source": "CT-RGO-14: registration numbers count as 3-rep sets only when the lifter confirms they were tested (logged: true); otherwise week 1 is technique plus a heavy triple. The triple stops at RIR 1-2, not a true 3RM: A-7 bars planned failure and G-20 lets the higher RIR win."
+  },
+  "departures": [
+    {
+      "rule": "IL-30",
+      "when": "main_amrap",
+      "reason": "CT-RGO-13: off-season rugby AMRAPs stop at RIR 2, so their RIR cell is 2-3, not IL-30's 1-2 (G-20: the CT rule outranks the format rule, and the higher RIR wins)"
+    }
+  ],
+  "supplemental": {
+    "type": "fsl",
+    "sets": 5
+  },
+  "layouts": {
+    "4": {
+      "source": "4 days, one main lift a day",
+      "days": [
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Warm-up: max-velocity sprints"
+          ],
+          "main": [
+            "Squat"
+          ],
+          "slots": [
+            {
+              "id": "sq.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "3"
+            },
+            {
+              "id": "sq.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "sq.trunk",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Plank",
+              "alternatives": [
+                "Side Plank"
+              ],
+              "sets": 3,
+              "reps": "30",
+              "rir": "3",
+              "basis": "Reps in seconds"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Then: neck isometrics"
+          ],
+          "main": [
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "bp.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Seal Row",
+                "Inverted Row",
+                "Kroc Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "bp.dips",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Dips",
+              "alternatives": [
+                "Tricep Dips",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "6-10",
+              "rir": "3"
+            },
+            {
+              "id": "bp.delts",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Rear Delt Fly",
+                "Dumbbell Upright Row"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "3"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11"
+          ],
+          "main": [
+            "Deadlift"
+          ],
+          "slots": [
+            {
+              "id": "dl.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Goblet Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Front Squat"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "dl.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "dl.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Then: neck isometrics"
+          ],
+          "main": [
+            "Overhead Press"
+          ],
+          "slots": [
+            {
+              "id": "ohp.incline",
+              "pattern": "incline-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Incline Press",
+              "alternatives": [
+                "Dumbbell Bench Press",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "ohp.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Inverted Row",
+              "alternatives": [
+                "Dumbbell Row",
+                "Seal Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "ohp.trunk",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Dead Bug",
+              "alternatives": [
+                "Russian Twist",
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "source": "CT-RGO-2: squat + bench, deadlift + OHP, then a short upper-body, power and sprint session; no supplemental (L-14)",
+      "supplemental": null,
+      "days": [
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Then: neck isometrics"
+          ],
+          "deload_extras": [
+            "Warm-up: Limber 11"
+          ],
+          "main": [
+            "Squat",
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "sb.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "3"
+            },
+            {
+              "id": "sb.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "sb.delts",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Rear Delt Fly",
+                "Dumbbell Upright Row"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "3"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Then: neck isometrics"
+          ],
+          "deload_extras": [
+            "Warm-up: Limber 11"
+          ],
+          "main": [
+            "Deadlift",
+            "Overhead Press"
+          ],
+          "slots": [
+            {
+              "id": "do.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "do.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Inverted Row",
+              "alternatives": [
+                "Dumbbell Row",
+                "Seal Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "do.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Warm-up: max-velocity sprints"
+          ],
+          "slots": [
+            {
+              "id": "up.power",
+              "pattern": "power",
+              "kind": "compound",
+              "exercise": "Push Press",
+              "alternatives": [
+                "Dumbbell Thruster"
+              ],
+              "sets": 3,
+              "reps": "3",
+              "rir": "3-4",
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "up.press",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Bench Press",
+              "alternatives": [
+                "Dumbbell Incline Press",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "3"
+            },
+            {
+              "id": "up.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Seal Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "up.trunk",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Dead Bug",
+              "alternatives": [
+                "Russian Twist",
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "source": "CT-RGO-2: squat + bench, then deadlift + OHP; no supplemental (L-14)",
+      "supplemental": null,
+      "days": [
+        {
+          "extras": [
+            "Warm-up: Limber 11, sprints",
+            "Then: neck isometrics"
+          ],
+          "deload_extras": [
+            "Warm-up: Limber 11"
+          ],
+          "main": [
+            "Squat",
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "sb.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "3"
+            },
+            {
+              "id": "sb.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "sb.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Seal Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            }
+          ]
+        },
+        {
+          "extras": [
+            "Warm-up: Limber 11",
+            "Then: neck isometrics"
+          ],
+          "deload_extras": [
+            "Warm-up: Limber 11"
+          ],
+          "main": [
+            "Deadlift",
+            "Overhead Press"
+          ],
+          "slots": [
+            {
+              "id": "do.nordic",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Nordic Curl",
+              "alternatives": [
+                "Glute Ham Raise"
+              ],
+              "sets": 2,
+              "reps": "3-5",
+              "rir": "3"
+            },
+            {
+              "id": "do.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Inverted Row",
+              "alternatives": [
+                "Dumbbell Row",
+                "Seal Row"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "3"
+            },
+            {
+              "id": "do.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-RGO-1: week 1 of the wave tops out at 85% of TM, about 76% of e1RM with TM at 90%; weeks 2 and 3 reach 81% and 86%. The optional extra triple at 80% of e1RM after week 1's AMRAP is not drafted.",
+    "CT-RGO-6: Activate (or equivalent) 3 times a week counts team trainings; if the team runs fewer than 3, the hand-over says so. No day is added.",
+    "CT-RGO-7, CT-RGO-8: Limber 11 opens every gym session and is labelled mobility preparation, never injury prevention. CT-RGO-11: neck work is labelled performance and robustness work, never concussion prevention.",
+    "CT-RGO-4: max-velocity sprints come before lifting. On the 2-day layout they share the Limber 11 warm-up segment, and the 2- and 3-day deload weeks drop the sprints and neck work to keep each Notes cell within VO-1's 20 words; the 4-day and the 3-day sprint day keep them.",
+    "CT-RGO-12: every accessory and supplemental set stops at RIR 3 or more, so no AMRAP Last Set rows (A-3 gives way under G-20).",
+    "L-17: squat is high bar for club lifters; the name stays Squat (LB-6).",
+    "In-season (CT-RGI) rules are not in this template, so an in-season block can't be drafted from it."
+  ]
+}

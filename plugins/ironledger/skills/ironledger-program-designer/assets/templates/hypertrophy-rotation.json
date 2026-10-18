@@ -1,0 +1,347 @@
+{
+  "schema": "designer-template/1",
+  "id": "hypertrophy-rotation",
+  "name": "Lower, Push, Pull rotation, then a rest day",
+  "engine": "rotation",
+  "client_types": [
+    "HYP"
+  ],
+  "default_days": 3,
+  "min_available_days": 5,
+  "rules": [
+    "CT-HYP-1",
+    "CT-HYP-3",
+    "CT-HYP-4",
+    "CT-HYP-5",
+    "CT-HYP-6",
+    "A-3",
+    "A-6",
+    "A-7",
+    "P-7",
+    "CT-PT-2"
+  ],
+  "decisions_relied_on": [
+    "M12",
+    "M13",
+    "M14",
+    "M20"
+  ],
+  "equipment_required": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "kind": "loading",
+      "reps": "13-15",
+      "rir": "3"
+    },
+    {
+      "week": 2,
+      "kind": "loading",
+      "reps": "13-15",
+      "rir": "3"
+    },
+    {
+      "week": 3,
+      "kind": "loading",
+      "reps": "10-12",
+      "rir": "2"
+    },
+    {
+      "week": 4,
+      "kind": "loading",
+      "reps": "10-12",
+      "rir": "2"
+    },
+    {
+      "week": 5,
+      "kind": "loading",
+      "reps": "5-6",
+      "rir": "0"
+    },
+    {
+      "week": 6,
+      "kind": "loading",
+      "reps": "5-6",
+      "rir": "0"
+    }
+  ],
+  "layouts": {
+    "3": {
+      "source": "Lower, Push, Pull, then a rest day; one rotation per Week (CT-HYP-6)",
+      "days": [
+        {
+          "label": "Lower",
+          "extras": [
+            "Warm-up: knee mobility"
+          ],
+          "slots": [
+            {
+              "id": "l.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Safety Bar Squat",
+              "alternatives": [
+                "High Bar Squat",
+                "Hack Squat",
+                "Leg Press"
+              ],
+              "sets": 4,
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "l.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "l.hinge",
+              "pattern": "hip-hinge",
+              "kind": "compound",
+              "exercise": "Romanian Deadlift",
+              "alternatives": [
+                "Dumbbell Romanian Deadlift",
+                "Stiff Leg Deadlift",
+                "Cable Pull Through"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "l.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Leg Curl",
+              "alternatives": [
+                "Seated Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "l.calf",
+              "pattern": "ankle-plantarflexion",
+              "kind": "isolation",
+              "exercise": "Standing Calf Raise",
+              "alternatives": [
+                "Seated Calf Raise",
+                "Leg Press Calf Raise",
+                "Dumbbell Calf Raise"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "l.back",
+              "pattern": "hip-extension",
+              "kind": "isolation",
+              "exercise": "Back Extension",
+              "alternatives": [
+                "Hyperextension",
+                "Glute Ham Raise"
+              ],
+              "sets": 3
+            }
+          ]
+        },
+        {
+          "label": "Push",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "slots": [
+            {
+              "id": "p.incline",
+              "pattern": "incline-press",
+              "kind": "compound",
+              "exercise": "Incline Bench Press",
+              "alternatives": [
+                "Dumbbell Incline Press",
+                "Machine Chest Press"
+              ],
+              "sets": 3,
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "p.bench",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Bench Press",
+              "alternatives": [
+                "Dumbbell Bench Press",
+                "Machine Chest Press",
+                "Smith Machine Bench Press"
+              ],
+              "sets": 4,
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "p.fly",
+              "pattern": "chest-fly",
+              "kind": "isolation",
+              "exercise": "Dumbbell Fly",
+              "alternatives": [
+                "Cable Fly",
+                "Pec Deck",
+                "Incline Dumbbell Fly"
+              ],
+              "sets": 2
+            },
+            {
+              "id": "p.overhead",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Shoulder Press",
+              "alternatives": [
+                "Seated Dumbbell Press",
+                "Machine Shoulder Press",
+                "Arnold Press"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "p.rear",
+              "pattern": "shoulder-horizontal-abduction",
+              "kind": "isolation",
+              "exercise": "Rear Delt Fly",
+              "alternatives": [
+                "Reverse Pec Deck",
+                "Cable Rear Delt Fly",
+                "Face Pull"
+              ],
+              "sets": 2
+            },
+            {
+              "id": "p.lateral",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Cable Lateral Raise",
+                "Machine Lateral Raise"
+              ],
+              "sets": 2,
+              "amrap_last_set": true
+            },
+            {
+              "id": "p.triceps",
+              "pattern": "elbow-extension",
+              "kind": "isolation",
+              "exercise": "Skull Crusher",
+              "alternatives": [
+                "Overhead Cable Extension",
+                "Cable Tricep Pushdown",
+                "Dumbbell Tricep Extension"
+              ],
+              "sets": 3
+            }
+          ]
+        },
+        {
+          "label": "Pull",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "slots": [
+            {
+              "id": "u.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Chest Supported Row",
+              "alternatives": [
+                "Seal Row",
+                "Machine Row",
+                "T-Bar Row"
+              ],
+              "sets": 4,
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "u.single",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Kroc Row",
+                "Seated Cable Row"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "u.pullover",
+              "pattern": "chest-fly",
+              "kind": "isolation",
+              "exercise": "Dumbbell Pullover",
+              "alternatives": [
+                "Straight Arm Pulldown"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "u.upright",
+              "pattern": "shoulder-abduction",
+              "kind": "compound",
+              "exercise": "Upright Row",
+              "alternatives": [
+                "Dumbbell Upright Row",
+                "Cable Lateral Raise"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "u.shrug",
+              "pattern": "shrug",
+              "kind": "isolation",
+              "exercise": "Dumbbell Shrug",
+              "alternatives": [
+                "Barbell Shrug"
+              ],
+              "sets": 3
+            },
+            {
+              "id": "u.curl",
+              "pattern": "elbow-flexion",
+              "kind": "isolation",
+              "exercise": "Dumbbell Curl",
+              "alternatives": [
+                "Hammer Curl",
+                "Cable Curl",
+                "EZ Bar Curl"
+              ],
+              "sets": 3,
+              "amrap_last_set": true
+            },
+            {
+              "id": "u.core",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Decline Crunch",
+                "Cable Crunch"
+              ],
+              "sets": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-HYP-6: one Week in the import is one rotation (Days 1 to 3), then a rest day, so the 6 Weeks run about 24 calendar days. Offered only to lifters with 5 or more available days.",
+    "CT-HYP-1: reps and RIR change every 2 rotations: 13-15 at RIR 3, then 10-12 at RIR 2, then 5-6 at RIR 0, where free-weight compounds stop at RIR 1 (CT-HYP-3, A-7).",
+    "A Nordic curl is a common lower-day choice; at 13 to 15 reps a leg curl fits the phase, with the Nordic curl kept as an alternative. The GHD sit-up is written as Sit Up.",
+    "P-7: rear delts, laterals and flyes take 2 sets each so shoulders stay at or under 11 fractional sets on the push day.",
+    "CT-HYP-4: name 2 to 4 priority muscles from the lifter's answers in program.priority_muscles; P-3 holds them to 10-20 sets a week.",
+    "CT-PT-2: each day opens with the mobility block for its pattern: 5 min rower or bike, three 1-set drills, then Shoulder Big 3 1 x 15 each."
+  ]
+}

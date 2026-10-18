@@ -1,0 +1,385 @@
+{
+  "about": "Custom exercise names the designer may emit once each one is approved (LB-9, A-9). IronLedger creates an alias as a custom exercise with no muscle groups, so the designer carries its metadata here. Every name scores under 0.8 against every library name and every other alias under IronLedger's matcher (LB-2), which the repository's tests check. muscleGroups use only the library's 16 groups (LB-8). Equipment uses the library vocabulary plus the designer-only tokens trap_bar, landmine, ski_erg and air_bike, which assets/substitutions.json documents. also_written lists spellings normalize() resolves to the alias once it is approved; they are never emitted. Only entries with approved true count anywhere (library.known, preflight F-7). Built 2026-09-23.",
+  "aliases": [
+    {
+      "name": "Trap Bar Deadlift",
+      "muscleGroups": [
+        "glutes",
+        "quadriceps",
+        "hamstrings",
+        "back"
+      ],
+      "equipment": [
+        "trap_bar"
+      ],
+      "isCompound": true,
+      "category": "barbell",
+      "pattern": "hinge",
+      "approved": false,
+      "also_written": [
+        "Trap-Bar Deadlift",
+        "Trap Bar Deadlifts",
+        "Trap-Bar Deadlifts",
+        "Trap Bar DL",
+        "Hex Bar Deadlift",
+        "Hex Bar Deadlifts",
+        "Open Hex Bar Deadlift"
+      ],
+      "note": "Standing inside the bar reduces lower-back shear (CT-PT-3). Proposed primary is glutes, not back as in Deadlift, because the lift is chosen to take load off the lower back. Category barbell, so F-5 plate checks apply; trap bars often weigh more than 20 kg."
+    },
+    {
+      "name": "Reverse Lunge",
+      "muscleGroups": [
+        "quadriceps",
+        "glutes"
+      ],
+      "equipment": [
+        "dumbbell"
+      ],
+      "isCompound": true,
+      "category": "dumbbell",
+      "pattern": "single-leg/lunge",
+      "approved": false,
+      "also_written": [
+        "Reverse Lunges",
+        "DB Reverse Lunge",
+        "DB Reverse Lunges",
+        "Dumbbell Reverse Lunge",
+        "Dumbbell Reverse Lunges"
+      ],
+      "note": "Easier on the knees than forward lunges or running (CT-PT-3). Named without an implement because 'Dumbbell Reverse Lunge' scores 0.8 against Dumbbell Lunge and would block import (LB-2); a barbell or bodyweight version goes in Notes. Muscles as Dumbbell Lunge."
+    },
+    {
+      "name": "Cossack Squat",
+      "muscleGroups": [
+        "quadriceps",
+        "glutes"
+      ],
+      "equipment": [
+        "bodyweight"
+      ],
+      "isCompound": true,
+      "category": "bodyweight",
+      "pattern": "single-leg/lunge",
+      "approved": false,
+      "also_written": [
+        "Cossack Squats"
+      ],
+      "note": "A squat-day accessory and a Limber 11 drill. The library has no adductor group, so adductor work counts as glutes, as Hip Adduction Machine does (LB-8)."
+    },
+    {
+      "name": "Jump Lunge",
+      "muscleGroups": [
+        "quadriceps",
+        "glutes"
+      ],
+      "equipment": [
+        "bodyweight"
+      ],
+      "isCompound": true,
+      "category": "bodyweight",
+      "pattern": "power",
+      "approved": false,
+      "also_written": [
+        "Jump Lunges",
+        "Jumping Lunges"
+      ],
+      "note": "A squat-day accessory. A plyometric, so for rugby lifters CT-RGO-12's stop rule applies."
+    },
+    {
+      "name": "Landmine Press",
+      "muscleGroups": [
+        "shoulders",
+        "chest",
+        "triceps"
+      ],
+      "equipment": [
+        "barbell",
+        "landmine"
+      ],
+      "isCompound": true,
+      "category": "barbell",
+      "pattern": "vertical push",
+      "approved": false,
+      "also_written": [
+        "Landmine Presses",
+        "Landmine Shoulder Press",
+        "Single-Arm Landmine Press",
+        "Single Arm Landmine Press"
+      ],
+      "note": "Needs a landmine. No joint claim is made for it, so it carries no joint tag."
+    },
+    {
+      "name": "Pin Squat",
+      "muscleGroups": [
+        "quadriceps",
+        "glutes",
+        "hamstrings"
+      ],
+      "equipment": [
+        "barbell",
+        "rack"
+      ],
+      "isCompound": true,
+      "category": "barbell",
+      "pattern": "squat",
+      "approved": false,
+      "also_written": [
+        "Pin Squats"
+      ],
+      "note": "A close squat variant from the safety pins (CT-PLO-1, M26). It is approved only when a program needs it. Muscles as Squat."
+    },
+    {
+      "name": "Pin Press",
+      "muscleGroups": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "equipment": [
+        "barbell",
+        "rack",
+        "bench"
+      ],
+      "isCompound": true,
+      "category": "barbell",
+      "pattern": "horizontal push",
+      "approved": false,
+      "also_written": [
+        "Pin Presses",
+        "Bench Pin Press"
+      ],
+      "note": "Bench press from the safety pins, a close bench variant (CT-PLO-1). 'Bench Pin Press' scores 0.8 against Bench Press, so it is never emitted. It is approved only when a program needs it. Muscles as Bench Press."
+    },
+    {
+      "name": "Pause Deadlift",
+      "muscleGroups": [
+        "back",
+        "hamstrings",
+        "glutes",
+        "lower_back"
+      ],
+      "equipment": [
+        "barbell"
+      ],
+      "isCompound": true,
+      "category": "barbell",
+      "pattern": "hinge",
+      "approved": false,
+      "also_written": [
+        "Paused Deadlift",
+        "Pause Deadlifts",
+        "Paused Deadlifts"
+      ],
+      "note": "Named in LB-9 as a missing library movement, and in M26 option A as the deadlift close variant ('RDL or paused deadlift'). IronLedger imports it silently as a custom exercise (LB-4). Muscles as Deadlift."
+    },
+    {
+      "name": "Weighted Dip",
+      "muscleGroups": [
+        "chest",
+        "triceps",
+        "shoulders"
+      ],
+      "equipment": [
+        "dip_bars"
+      ],
+      "isCompound": true,
+      "category": "bodyweight",
+      "pattern": "horizontal push",
+      "approved": false,
+      "also_written": [
+        "Weighted Dips"
+      ],
+      "note": "A bench-day accessory and an LB-9 example. Kept apart from Dips so bodyweight and loaded dips don't share a record (LB-3's reason for weighted pull-ups). Load is the added weight. Muscles and category as Dips."
+    },
+    {
+      "name": "V-Sit",
+      "muscleGroups": [
+        "abs"
+      ],
+      "equipment": [
+        "bodyweight"
+      ],
+      "isCompound": false,
+      "category": "bodyweight",
+      "pattern": "trunk flexion",
+      "approved": false,
+      "also_written": [
+        "V-Sits",
+        "V Sit",
+        "V Sits",
+        "Weighted V-Sit",
+        "Weighted V-Sits"
+      ],
+      "note": "Weighted V-sits often close the day. One name for loaded and unloaded: the Load cell carries any plate."
+    },
+    {
+      "name": "Dumbbell Side Bend",
+      "muscleGroups": [
+        "obliques",
+        "abs"
+      ],
+      "equipment": [
+        "dumbbell"
+      ],
+      "isCompound": false,
+      "category": "dumbbell",
+      "pattern": "lateral flexion",
+      "approved": false,
+      "also_written": [
+        "Side Bends",
+        "Side Bend",
+        "DB Side Bend",
+        "DB Side Bends",
+        "Dumbbell Side Bends"
+      ],
+      "note": "A common last accessory on squat day. The library has no side bend."
+    },
+    {
+      "name": "Copenhagen Plank",
+      "muscleGroups": [
+        "glutes",
+        "obliques"
+      ],
+      "equipment": [
+        "bench"
+      ],
+      "isCompound": false,
+      "category": "bodyweight",
+      "pattern": "hip adduction/abduction",
+      "approved": false,
+      "also_written": [
+        "Copenhagen Planks",
+        "Copenhagen",
+        "Copenhagan",
+        "Copenhagan Plank",
+        "Copenhagen Adductor Plank"
+      ],
+      "note": "Often misspelt 'Copenhagan'. An adductor exercise, and the library has no adductor group, so it counts as glutes (LB-8). Timed: Reps in whole seconds with 'Reps in seconds' in Notes (IL-28)."
+    },
+    {
+      "name": "Y Raise",
+      "muscleGroups": [
+        "shoulders",
+        "traps"
+      ],
+      "equipment": [
+        "dumbbell"
+      ],
+      "isCompound": false,
+      "category": "dumbbell",
+      "pattern": "rear delt/upper back",
+      "approved": false,
+      "also_written": [
+        "Y Raises",
+        "Y-Raise",
+        "Y-Raises",
+        "Cable Y-Raise",
+        "Cable Y Raise",
+        "Prone Y Raise",
+        "Prone Y Raises"
+      ],
+      "note": "Upper-day movement prep, for example 'Y raises 2x10'; LB-4 and LB-9 name the cable version. One alias covers both, because 'Cable Y Raise' and 'Y Raise' score 0.8 against each other and the second would block import once the first is in the lifter's custom list. The implement goes in Notes."
+    },
+    {
+      "name": "Neck Isometric",
+      "muscleGroups": [
+        "traps"
+      ],
+      "equipment": [
+        "bodyweight"
+      ],
+      "isCompound": false,
+      "category": "bodyweight",
+      "pattern": "neck",
+      "approved": false,
+      "also_written": [
+        "Neck Isometrics",
+        "Neck Iso",
+        "Neck Isometric Hold",
+        "Isometric Neck Hold"
+      ],
+      "note": "CT-RGO-11: neck work 2 times a week for rugby, labelled performance and robustness work, never concussion prevention. Timed: Reps in whole seconds with 'Reps in seconds' in Notes (IL-28). The library has no neck group; traps is proposed so the sets count somewhere, and they may be left uncounted instead."
+    },
+    {
+      "name": "Lift to Platform",
+      "muscleGroups": [
+        "full_body"
+      ],
+      "equipment": [
+        "none"
+      ],
+      "isCompound": true,
+      "category": "other",
+      "pattern": "carry",
+      "approved": false,
+      "also_written": [
+        "Lift-to-Platform",
+        "Lift to a Platform",
+        "Box Lift to Platform"
+      ],
+      "note": "CT-ADF-9 requires 'a lift to a platform' in ADF strength sessions; the Army task median is 25 kg to 1.5 m. No library name exists. The implement (sandbag, box or kettlebell) is the lifter's choice, so set equipment and category when approving. full_body follows LB-8's rule for carries."
+    },
+    {
+      "name": "Sprint",
+      "muscleGroups": [
+        "full_body"
+      ],
+      "equipment": [
+        "none"
+      ],
+      "isCompound": true,
+      "category": "cardio",
+      "pattern": "conditioning",
+      "approved": false,
+      "also_written": [
+        "Sprints",
+        "Max Velocity Sprint",
+        "Max Velocity Sprints",
+        "Max-Velocity Sprint",
+        "Max-Velocity Sprints"
+      ],
+      "note": "Hand-over only: sprints are never import rows (IL-28). CT-RGO-4 requires max-velocity sprinting weekly for rugby, and CT-PT-7 allows it only when pain-free. The alias gives the hand-over one spelling."
+    },
+    {
+      "name": "Ski Erg",
+      "muscleGroups": [
+        "full_body"
+      ],
+      "equipment": [
+        "ski_erg"
+      ],
+      "isCompound": true,
+      "category": "cardio",
+      "pattern": "conditioning",
+      "approved": false,
+      "also_written": [
+        "Ski-Erg",
+        "SkiErg",
+        "Ski Ergs",
+        "Ski-Ergs"
+      ],
+      "note": "Hand-over only (IL-28). A common cardio finisher."
+    },
+    {
+      "name": "Air Bike",
+      "muscleGroups": [
+        "full_body"
+      ],
+      "equipment": [
+        "air_bike"
+      ],
+      "isCompound": true,
+      "category": "cardio",
+      "pattern": "conditioning",
+      "approved": false,
+      "also_written": [
+        "Air Bikes",
+        "Airbike",
+        "Assault Bike",
+        "Echo Bike"
+      ],
+      "note": "Hand-over only (IL-28). A common cardio finisher. It is not the library's Stationary Bike."
+    }
+  ]
+}

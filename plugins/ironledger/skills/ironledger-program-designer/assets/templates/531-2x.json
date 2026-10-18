@@ -1,0 +1,326 @@
+{
+  "schema": "designer-template/1",
+  "id": "531-2x",
+  "name": "5/3/1 with a second, lighter exposure of each competition lift (M1 B)",
+  "engine": "531",
+  "client_types": [
+    "PLO",
+    "GEN"
+  ],
+  "default_days": 4,
+  "rules": [
+    "L-5",
+    "L-6",
+    "L-7",
+    "L-8",
+    "L-13",
+    "L-14",
+    "L-15",
+    "L-16",
+    "CT-PLO-1",
+    "CT-PLO-2",
+    "CT-GEN-5",
+    "A-1",
+    "A-2",
+    "A-3",
+    "A-4",
+    "CT-PT-2"
+  ],
+  "decisions_relied_on": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M8",
+    "M9",
+    "M11",
+    "M12",
+    "M13",
+    "M16",
+    "M20"
+  ],
+  "equipment_required": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "kind": "loading",
+      "wave": 1
+    },
+    {
+      "week": 2,
+      "kind": "loading",
+      "wave": 2
+    },
+    {
+      "week": 3,
+      "kind": "loading",
+      "wave": 3
+    },
+    {
+      "week": 4,
+      "kind": "deload"
+    }
+  ],
+  "rest": {
+    "main": "Rest 3 min",
+    "main_heavy": "Rest 3-5 min",
+    "supplemental": "Rest 2 min"
+  },
+  "amrap": {
+    "rir": "1-2",
+    "cue": "as many strong reps as you can, leaving 1 to 2 in the tank"
+  },
+  "supplemental": null,
+  "layouts": {
+    "4": {
+      "source": "L-15 order; CT-PLO-1: each competition lift once as 5/3/1 and once FSL-style on another day",
+      "days": [
+        {
+          "label": "Squat",
+          "extras": [
+            "Warm-up: knee mobility"
+          ],
+          "main": [
+            "Squat"
+          ],
+          "second": [
+            {
+              "lift": "Bench Press",
+              "sets": 5
+            }
+          ],
+          "slots": [
+            {
+              "id": "squat.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge",
+                "Goblet Squat"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "squat.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Seated Cable Row",
+                "Chin Up"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "squat.trunk",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Cable Crunch",
+              "alternatives": [
+                "Hanging Leg Raise",
+                "Hanging Knee Raise",
+                "Dead Bug"
+              ],
+              "sets": 3,
+              "reps": "12-20",
+              "rir": "2-4"
+            }
+          ]
+        },
+        {
+          "label": "Bench",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "main": [
+            "Bench Press"
+          ],
+          "second": [
+            {
+              "lift": "Deadlift",
+              "sets": 3
+            }
+          ],
+          "slots": [
+            {
+              "id": "bench.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Lat Pulldown",
+              "alternatives": [
+                "Chin Up",
+                "Pull Up",
+                "Seated Cable Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "bench.delts",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Cable Lateral Raise",
+                "Machine Lateral Raise"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "2-3",
+              "amrap_last_set": true
+            },
+            {
+              "id": "bench.triceps",
+              "pattern": "elbow-extension",
+              "kind": "isolation",
+              "exercise": "Cable Tricep Pushdown",
+              "alternatives": [
+                "Rope Pushdown",
+                "Dumbbell Tricep Extension",
+                "Overhead Cable Extension"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Deadlift",
+          "extras": [
+            "Warm-up: hinge mobility"
+          ],
+          "main": [
+            "Deadlift"
+          ],
+          "slots": [
+            {
+              "id": "deadlift.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Leg Curl",
+              "alternatives": [
+                "Seated Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2-3"
+            },
+            {
+              "id": "deadlift.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Leg Press",
+              "alternatives": [
+                "Goblet Squat",
+                "Hack Squat",
+                "Dumbbell Split Squat"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "deadlift.trunk",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Ab Wheel Rollout",
+              "alternatives": [
+                "Cable Crunch",
+                "Hanging Knee Raise",
+                "Dead Bug"
+              ],
+              "sets": 3,
+              "reps": "10-15",
+              "rir": "2-4"
+            }
+          ]
+        },
+        {
+          "label": "Press",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "main": [
+            "Overhead Press"
+          ],
+          "second": [
+            {
+              "lift": "Squat",
+              "sets": 5
+            }
+          ],
+          "slots": [
+            {
+              "id": "press.incline",
+              "pattern": "incline-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Incline Press",
+              "alternatives": [
+                "Machine Chest Press",
+                "Dumbbell Bench Press",
+                "Incline Bench Press"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2",
+              "tempo": "Full ROM"
+            },
+            {
+              "id": "press.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Seated Cable Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Dumbbell Row",
+                "Lat Pulldown"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "press.triceps",
+              "pattern": "elbow-extension",
+              "kind": "isolation",
+              "exercise": "Rope Pushdown",
+              "alternatives": [
+                "Cable Tricep Pushdown",
+                "Overhead Cable Extension",
+                "Dumbbell Tricep Extension"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2-3",
+              "amrap_last_set": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-PLO-1 (M1): squat, bench and deadlift each get one 5/3/1 exposure and one FSL-style exposure (sets x 5 at that week's first-set % of TM) on another day: bench on squat day, deadlift on bench day, squat on OHP day. The FSL-style work replaces same-day FSL (L-14).",
+    "CT-PLO-1 allows a third bench exposure or a deadlift variant for the second exposure; this default keeps the competition lifts (CT-PLO-2). Swap only on request.",
+    "No reduced-day layout: the rules give none for 531-2x (CT-SEL-7). A lifter with fewer than 4 days is drafted on 531-4day's layouts.",
+    "CT-PLO-6: the hand-over shows each competition lift's TM beside its source set; add the meet result when there is one."
+  ]
+}

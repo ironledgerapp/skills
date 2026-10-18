@@ -1,0 +1,2331 @@
+{
+  "about": "Substitution table for the program designer (A-9). Each pattern lists its options in the order to try them: the most common choices first, then the rest of the library. 'alias': true marks an entry from assets/exercise-aliases.json; until it is approved, library.substitutes() leaves it out unless include_unapproved is set. equipment copies the library entry (or the alias). level is regression, standard or progression within the pattern (G-20 swaps a disliked mandatory exercise for an allowed regression). competition_variant_of names the competition lift a close variant stands in for (CT-PLO-1, M26). lineage_alias_of marks a second library spelling of the same lift (LB-6): it is never offered as a substitute. reps_unit marks timed or distance work (IL-28). A pattern's fallback is offered after its own options, for the reason given. Built 2026-09-23.",
+  "equipment_vocabulary": [
+    "barbell",
+    "bench",
+    "bodyweight",
+    "cable",
+    "dip_bars",
+    "dumbbell",
+    "ez_bar",
+    "kettlebell",
+    "machine",
+    "none",
+    "pull_up_bar",
+    "rack"
+  ],
+  "equipment_extensions": {
+    "trap_bar": "A trap (hex) bar. The library has no token for it, and a barbell gym may not have one.",
+    "landmine": "A landmine attachment.",
+    "ski_erg": "A ski ergometer.",
+    "air_bike": "An air (assault) bike."
+  },
+  "always_available": [
+    "bodyweight",
+    "none"
+  ],
+  "club_gym_equipment": [
+    "barbell",
+    "rack",
+    "bench",
+    "trap_bar",
+    "dumbbell",
+    "air_bike",
+    "ski_erg",
+    "landmine",
+    "dip_bars"
+  ],
+  "joint_tags": {
+    "knee-friendly": "The variation is commonly chosen as easier on the knees (CT-PT-3).",
+    "low-back-friendly": "The variation is commonly chosen to protect the lower back (CT-PT-3).",
+    "shoulder-friendly": "No entries: nothing in 01, 04 or 07 names a variation as easier on the shoulder.",
+    "wrist-friendly": "No entries: nothing in 01, 04 or 07 names a variation as easier on the wrist."
+  },
+  "joint_tag_rule": "A tag is written only where there is a stated reason for it, citing CT-PT-3. Everything else stays untagged, and the general rule applies: keep every pain-free pattern and change range, grip or stance, implement, tempo or side for the one that hurts (CT-PT-3).",
+  "levels": [
+    "regression",
+    "standard",
+    "progression"
+  ],
+  "competition_lifts": [
+    "Squat",
+    "Bench Press",
+    "Deadlift"
+  ],
+  "pattern_aliases_about": "Other spellings of the pattern keys, for templates that name patterns their own way. library.pattern_key() also ignores case and punctuation, so 'knee-flexion' is 'knee flexion' without an entry here. incline-press has no pattern of its own: incline pressing sits in horizontal push.",
+  "pattern_aliases": {
+    "hip-hinge": "hinge",
+    "horizontal-press": "horizontal push",
+    "vertical-press": "vertical push",
+    "incline-press": "horizontal push",
+    "squat-unilateral": "single-leg/lunge",
+    "shoulder-abduction": "lateral delt",
+    "anti-extension": "anti-extension core",
+    "anti-rotation": "anti-rotation core",
+    "shoulder-horizontal-abduction": "rear delt/upper back",
+    "ankle-plantarflexion": "calf"
+  },
+  "patterns": {
+    "squat": {
+      "description": "Bilateral knee-dominant squat. A-2 slots: 'goblet or front squat' on squat day and 'a second squat pattern' on deadlift day.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Goblet Squat",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Front Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "A close variant under M26."
+        },
+        {
+          "name": "Leg Press",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {
+            "knee-friendly": "High foot placement reduces knee stress (CT-PT-3); holds only with 'High foot' in Notes"
+          },
+          "competition_variant_of": null,
+          "note": "Write 'High foot' in Notes when chosen for the knees."
+        },
+        {
+          "name": "Hack Squat",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Safety Bar Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "A squat back-down variant (CT-PLO-15); needs a safety squat bar although the library lists only barbell and rack."
+        },
+        {
+          "name": "Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Competition lift and the default spelling (LB-6); high bar by default (L-17)."
+        },
+        {
+          "name": "High Bar Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "A back-down variant."
+        },
+        {
+          "name": "Low Bar Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "For powerlifters who already squat low bar (L-17)."
+        },
+        {
+          "name": "Pause Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "A close variant under M26."
+        },
+        {
+          "name": "Tempo Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "Tempo 3-0-0 back-downs (CT-PLO-15)."
+        },
+        {
+          "name": "Box Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "regression",
+          "joint_tags": {
+            "knee-friendly": "A box sets a safe, repeatable depth for the knees (CT-PT-3)"
+          },
+          "competition_variant_of": "Squat",
+          "note": "The library's Box Squat is the barbell version; a goblet box squat goes in Notes."
+        },
+        {
+          "name": "Pin Squat",
+          "alias": true,
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Squat",
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Pendulum Squat",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Belt Squat",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Smith Machine Squat",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Closest library name to a Smith front squat."
+        },
+        {
+          "name": "Kettlebell Squat",
+          "equipment": [
+            "kettlebell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Bodyweight Squat",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Back Squat",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "lineage_alias_of": "Squat",
+          "note": "The same lift as Squat under another key (LB-6): use only when the lifter's lineage already uses this spelling."
+        }
+      ]
+    },
+    "hinge": {
+      "description": "Hip hinge: the deadlift family and Romanian deadlift variants. A-2 slot: 'RDL or hamstring' on deadlift day.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Romanian Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "A deadlift-day accessory; a close deadlift variant under M26."
+        },
+        {
+          "name": "Dumbbell Romanian Deadlift",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Trap Bar Deadlift",
+          "alias": true,
+          "equipment": [
+            "trap_bar"
+          ],
+          "level": "regression",
+          "joint_tags": {
+            "low-back-friendly": "Standing inside the bar reduces lower-back shear (CT-PT-3)"
+          },
+          "competition_variant_of": null,
+          "note": "Alias pending approval. Needs a trap bar."
+        },
+        {
+          "name": "Stiff Leg Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Good Morning",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Competition lift and the default spelling (LB-6)."
+        },
+        {
+          "name": "Deficit Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "A deadlift back-down variant (CT-PLO-15)."
+        },
+        {
+          "name": "Pause Deadlift",
+          "alias": true,
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "Alias pending approval; M26 option A and LB-9."
+        },
+        {
+          "name": "Block Pull",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "Reduced range from blocks."
+        },
+        {
+          "name": "Rack Pull",
+          "equipment": [
+            "barbell",
+            "rack"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "Reduced range from the pins; not used in 01 or 07."
+        },
+        {
+          "name": "Sumo Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Deadlift",
+          "note": "The other stance, for back-downs in the stance the lifter doesn't compete in."
+        },
+        {
+          "name": "Conventional Deadlift",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "lineage_alias_of": "Deadlift",
+          "note": "The same lift as Deadlift under another key (LB-6)."
+        }
+      ]
+    },
+    "horizontal push": {
+      "description": "Horizontal and incline pressing. A-2 slots: 'DB press' on bench day, 'incline DB press' and 'push-ups' on OHP day.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Dumbbell Bench Press",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Incline Press",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Push Up",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "An ADF test exercise (CT-ADF-6)."
+        },
+        {
+          "name": "Incline Push Up",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "CT-ADF-6: incline push-up regressions until the lifter meets the test standard."
+        },
+        {
+          "name": "Bench Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Competition lift."
+        },
+        {
+          "name": "Paused Bench Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press",
+          "note": "A bench back-down variant (CT-PLO-15)."
+        },
+        {
+          "name": "Close Grip Bench Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press",
+          "note": "A second bench exposure (CT-PLO-16)."
+        },
+        {
+          "name": "Larsen Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press"
+        },
+        {
+          "name": "Spoto Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press"
+        },
+        {
+          "name": "Floor Press",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press",
+          "note": "Reduced-range bench; not used in 01 or 07."
+        },
+        {
+          "name": "Pin Press",
+          "alias": true,
+          "equipment": [
+            "barbell",
+            "rack",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": "Bench Press",
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Incline Bench Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Chest Press",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Smith Machine Bench Press",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Decline Press",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Decline Bench Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Decline Push Up",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dips",
+          "equipment": [
+            "dip_bars"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Chest Dips",
+          "equipment": [
+            "dip_bars"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Weighted Dip",
+          "alias": true,
+          "equipment": [
+            "dip_bars"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval (LB-9)."
+        }
+      ]
+    },
+    "vertical push": {
+      "description": "Overhead pressing: the OHP main lift and its substitutes.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Overhead Press",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "House main lift and the default spelling (LB-6)."
+        },
+        {
+          "name": "Dumbbell Shoulder Press",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Seated Dumbbell Press",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Shoulder Press",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Seated Overhead Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Landmine Press",
+          "alias": true,
+          "equipment": [
+            "barbell",
+            "landmine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval. Needs a landmine."
+        },
+        {
+          "name": "Arnold Press",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Smith Machine Overhead Press",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Push Press",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Behind Neck Press",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Military Press",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "lineage_alias_of": "Overhead Press",
+          "note": "The same lift as Overhead Press under another key (LB-6)."
+        }
+      ]
+    },
+    "horizontal pull": {
+      "description": "Rows. A-2 slots: 'row or chin' on bench day and 'row' on OHP day; pressing is paired with pulling.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Dumbbell Row",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Barbell Row",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Chest Supported Row",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Seated Cable Row",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Row",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Inverted Row",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Seal Row",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Pendlay Row",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "The coach."
+        },
+        {
+          "name": "T-Bar Row",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "The coach."
+        },
+        {
+          "name": "Yates Row",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Kroc Row",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "vertical pull": {
+      "description": "Pull-ups, chin-ups and pulldowns. A-2's 'row or chin' slot; pull-ups are mandatory for ADF Special Forces candidates (CT-ADF-9, CT-ADF-14).",
+      "template_slot": true,
+      "fallback": "horizontal pull",
+      "fallback_reason": "A-2's slot is 'row or chin', and pressing is paired with pulling: a row fills it where there is no pull-up bar or cable.",
+      "options": [
+        {
+          "name": "Lat Pulldown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Chin Up",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Pull Up",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "ADF 'over-grasp heaves' (CT-ADF-9)."
+        },
+        {
+          "name": "Neutral Grip Pull Up",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Neutral Grip Lat Pulldown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Close Grip Lat Pulldown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Wide Grip Lat Pulldown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Wide Grip Pull Up",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Straight Arm Pulldown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Pullover (Back Focus)",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Shares IronLedger's lift key with Dumbbell Pullover (LB-5)."
+        }
+      ]
+    },
+    "single-leg/lunge": {
+      "description": "Unilateral leg work, on squat or deadlift day; CT-RGO-3's unilateral leg work.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Bulgarian Split Squat",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "The barbell version goes in Notes."
+        },
+        {
+          "name": "Dumbbell Split Squat",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Reverse Lunge",
+          "alias": true,
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {
+            "knee-friendly": "Easier on the knees than forward lunges or running (CT-PT-3)"
+          },
+          "competition_variant_of": null,
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Dumbbell Lunge",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Barbell Lunge",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Walking Lunge",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Step Up",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cossack Squat",
+          "alias": true,
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Pistol Squat",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "knee flexion": {
+      "description": "Hamstring curls and Nordics. A-2's 'RDL or hamstring' slot; Nordics for rugby (CT-RGO-5, CT-RGI-6).",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Leg Curl",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Seated or lying machine."
+        },
+        {
+          "name": "Seated Leg Curl",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Lying Leg Curl",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Glute Ham Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Nordic Curl",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Mandatory for rugby, or a regression (CT-RGO-5), built up progressively."
+        }
+      ]
+    },
+    "knee extension": {
+      "description": "Quad isolation: knee extensions.",
+      "template_slot": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Leg Extension",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Sissy Squat",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "hip extension": {
+      "description": "Glute-dominant hip extension: thrusts, bridges and back extensions.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Hip Thrust",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Glute Bridge",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Back Extension",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Barbell Glute Bridge",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Hip Thrust",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Hyperextension",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Single Leg Glute Bridge",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Pull Through",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Frog Pump",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Kickback",
+          "equipment": [
+            "cable"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Kickback",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "hip adduction/abduction": {
+      "description": "Adductor and abductor work. The library counts both as glutes (LB-8).",
+      "template_slot": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Hip Adduction Machine",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Hip Abduction Machine",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Copenhagen Plank",
+          "alias": true,
+          "equipment": [
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "reps_unit": "seconds",
+          "note": "Alias pending approval; often written 'Copenhagan'."
+        }
+      ]
+    },
+    "elbow flexion": {
+      "description": "Biceps curls.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Dumbbell Curl",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Barbell Curl",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Hammer Curl",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Curl",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Never the target for a hamstring curl (LB-3)."
+        },
+        {
+          "name": "Preacher Curl",
+          "equipment": [
+            "ez_bar",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "EZ Bar Curl",
+          "equipment": [
+            "ez_bar"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Curl",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Hammer Curl",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Incline Dumbbell Curl",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Spider Curl",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Drag Curl",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Concentration Curl",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Preacher Curl",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "elbow extension": {
+      "description": "Triceps: A-2's 'laterals or triceps' slot on bench day.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Skull Crusher",
+          "equipment": [
+            "ez_bar",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Tricep Pushdown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Rope Pushdown",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Overhead Cable Extension",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Tricep Extension",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Diamond Push Up",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "JM Press",
+          "equipment": [
+            "barbell",
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Tricep Dips",
+          "equipment": [
+            "dip_bars"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Bench Dips",
+          "equipment": [
+            "bench"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Tricep Extension",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Tricep Kickback",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "lateral delt": {
+      "description": "Side-delt work: A-2's 'laterals or triceps' slot; DB lateral raises often carry 'AMRAP Last Set'. The library has no delt heads (LB-8).",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Lateral Raise",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Lateral Raise",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Machine Lateral Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Lu Raise",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Upright Row",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Upright Row",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "rear delt/upper back": {
+      "description": "Rear delts and upper back: face pulls, rear-delt flyes and Y raises.",
+      "template_slot": true,
+      "fallback": "horizontal pull",
+      "fallback_reason": "Rear-delt isolation needs dumbbells, cables or a machine; pressing is paired with pulling, so a row keeps the upper-back pull.",
+      "options": [
+        {
+          "name": "Face Pull",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Rear Delt Fly",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Reverse Pec Deck",
+          "equipment": [
+            "machine"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Rear Delt Fly",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Y Raise",
+          "alias": true,
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval; used as movement prep."
+        }
+      ]
+    },
+    "chest fly": {
+      "description": "Chest isolation: flyes and pullovers.",
+      "template_slot": true,
+      "fallback": "horizontal push",
+      "fallback_reason": "With no fly equipment, a press keeps the chest work in the slot.",
+      "options": [
+        {
+          "name": "Pec Deck",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Fly",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Fly",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Incline Dumbbell Fly",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Cable Crossover",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "High to Low Cable Fly",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Low to High Cable Fly",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Pullover",
+          "equipment": [
+            "dumbbell",
+            "bench"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Chest-primary in the library."
+        }
+      ]
+    },
+    "shrug": {
+      "description": "Trap elevation: shrugs, on OHP or pull days.",
+      "template_slot": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Barbell Shrug",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Shrug",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "anti-extension core": {
+      "description": "Trunk bracing against extension: planks, dead bugs, rollouts. A-1 closes each day with trunk work; CT-PT-1 finishes with a carry or a core exercise.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Plank",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "reps_unit": "seconds"
+        },
+        {
+          "name": "Dead Bug",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {
+            "low-back-friendly": "Paired with the Pallof press to protect the lower back (CT-PT-3)"
+          },
+          "competition_variant_of": null
+        },
+        {
+          "name": "Ab Wheel Rollout",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "anti-rotation core": {
+      "description": "Trunk bracing against rotation and side-bending: Pallof press, side plank, controlled woodchops.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Pallof Press",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {
+            "low-back-friendly": "Anti-rotation core work, chosen to protect the lower back (CT-PT-3)"
+          },
+          "competition_variant_of": null
+        },
+        {
+          "name": "Side Plank",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "reps_unit": "seconds"
+        },
+        {
+          "name": "Cable Woodchop",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "A controlled rotation rather than a pure anti-rotation hold."
+        }
+      ]
+    },
+    "trunk flexion": {
+      "description": "Trunk flexion finishers: crunches, weighted V-sits, GHD sit-ups, hanging leg raises; sit-up practice for ADF (CT-ADF-6).",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Crunch",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "V-Sit",
+          "alias": true,
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Hanging Leg Raise",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Sit Up",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "ADF test exercise (CT-ADF-6, CT-ADF-7)."
+        },
+        {
+          "name": "Cable Crunch",
+          "equipment": [
+            "cable"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Decline Crunch",
+          "equipment": [
+            "bench"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Hanging Knee Raise",
+          "equipment": [
+            "pull_up_bar"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Leg Raise",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Bicycle Crunch",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "lateral flexion": {
+      "description": "Side bends, a common squat-day finisher.",
+      "template_slot": false,
+      "alias_only": true,
+      "fallback": "anti-rotation core",
+      "fallback_reason": "Until the side-bend alias is approved, a lateral-core library exercise closes the day (A-1 trunk work).",
+      "options": [
+        {
+          "name": "Dumbbell Side Bend",
+          "alias": true,
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval."
+        }
+      ]
+    },
+    "carry": {
+      "description": "Loaded carries and lift-and-carry tasks: farmer's carries, CT-PT-1's carry finisher, CT-ADF-9's carries and lift to a platform.",
+      "template_slot": true,
+      "fallback": "anti-rotation core",
+      "fallback_reason": "CT-PT-1 finishes a session with 'a carry or a core exercise', and the library has only one carry.",
+      "options": [
+        {
+          "name": "Farmer's Walk",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "reps_unit": "metres"
+        },
+        {
+          "name": "Lift to Platform",
+          "alias": true,
+          "equipment": [
+            "none"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval; CT-ADF-9."
+        }
+      ]
+    },
+    "calf": {
+      "description": "Calf raises: for example single-leg calf raises 5 x 15 on deadlift day; calf raises in CT-FEM-6's program.",
+      "template_slot": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Standing Calf Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Seated Calf Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Leg Press Calf Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Smith Machine Calf Raise",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Calf Raise",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Bodyweight Calf Raise",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "neck": {
+      "description": "Neck work 2 times a week for rugby (CT-RGO-11). The library has none, so every option is an alias that needs approval.",
+      "template_slot": true,
+      "alias_only": true,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Neck Isometric",
+          "alias": true,
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "reps_unit": "seconds",
+          "note": "Alias pending approval."
+        }
+      ]
+    },
+    "power": {
+      "description": "Jumps, throws and Olympic-lift derivatives. For rugby they stop at 20 to 25% velocity loss or RIR 3 or more (CT-RGO-12).",
+      "template_slot": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Kettlebell Swing",
+          "equipment": [
+            "kettlebell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Hang Clean",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Power Clean",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Jump Lunge",
+          "alias": true,
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval."
+        },
+        {
+          "name": "Kettlebell Clean",
+          "equipment": [
+            "kettlebell"
+          ],
+          "level": "regression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Kettlebell Snatch",
+          "equipment": [
+            "kettlebell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Power Snatch",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Clean",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Snatch",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Clean and Jerk",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "progression",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Dumbbell Thruster",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Thruster",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    },
+    "conditioning": {
+      "description": "Aerobic and interval work. Never import rows: it goes in the hand-over, with a 'Then: ...' Notes segment on the day's first row (IL-28). Sprints only when pain-free (CT-PT-7).",
+      "template_slot": false,
+      "import_rows": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Rowing Machine",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "A warm-up or a finisher."
+        },
+        {
+          "name": "Stationary Bike",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "A warm-up."
+        },
+        {
+          "name": "Air Bike",
+          "alias": true,
+          "equipment": [
+            "air_bike"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval; a finisher."
+        },
+        {
+          "name": "Ski Erg",
+          "alias": true,
+          "equipment": [
+            "ski_erg"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval; a finisher."
+        },
+        {
+          "name": "Sprint",
+          "alias": true,
+          "equipment": [
+            "none"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Alias pending approval; CT-RGO-4 max-velocity sprinting."
+        },
+        {
+          "name": "Sled Push",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Optional for acceleration; never replaces unresisted sprints (CT-RGO-4)."
+        },
+        {
+          "name": "Sled Pull",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Jump Rope",
+          "equipment": [
+            "none"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "Club gym jump ropes (CT-RGO-15)."
+        },
+        {
+          "name": "Battle Ropes",
+          "equipment": [
+            "none"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Treadmill",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Elliptical",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Stair Climber",
+          "equipment": [
+            "machine"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Burpee",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Man Maker",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Mountain Climber",
+          "equipment": [
+            "bodyweight"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null,
+          "note": "A Limber 11 drill."
+        }
+      ]
+    },
+    "forearm": {
+      "description": "Grip and wrist work.",
+      "template_slot": false,
+      "fallback": null,
+      "options": [
+        {
+          "name": "Wrist Curl",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Reverse Wrist Curl",
+          "equipment": [
+            "dumbbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Barbell Wrist Curl",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        },
+        {
+          "name": "Reverse Curl",
+          "equipment": [
+            "barbell"
+          ],
+          "level": "standard",
+          "joint_tags": {},
+          "competition_variant_of": null
+        }
+      ]
+    }
+  }
+}

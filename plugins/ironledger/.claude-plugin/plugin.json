@@ -1,7 +1,7 @@
 {
   "name": "ironledger",
-  "description": "Strength calculators, a program writer that checks files with the IronLedger app's import rules, a training review from IronLedger exports, a meet attempt planner and a deload planner. Connects the free IronLedger MCP server (no account or key).",
-  "version": "1.1.0",
+  "description": "Strength calculators, a program designer and a program writer that check files with the IronLedger app's import rules, a training review from IronLedger exports, a meet attempt planner, a deload planner and a nutrition plan builder. Connects the free IronLedger MCP server (no account or key).",
+  "version": "1.2.1",
   "author": {
     "name": "IronLedger",
     "url": "https://www.ironledger.app"
@@ -15,8 +15,10 @@
     "one rep max",
     "RPE",
     "workout program",
+    "program design",
     "meet attempts",
     "deload",
+    "nutrition",
     "IronLedger"
   ]
 }

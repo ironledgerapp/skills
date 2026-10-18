@@ -1,0 +1,210 @@
+{
+  "schema": "designer-template/1",
+  "id": "531-4day",
+  "name": "5/3/1, one main lift a day",
+  "engine": "531",
+  "client_types": ["GEN", "HYP"],
+  "default_days": 4,
+  "rules": ["L-5", "L-6", "L-7", "L-8", "L-13", "L-14", "L-15", "L-16", "A-1", "A-2", "A-3", "A-4", "CT-GEN-1", "CT-GEN-2", "CT-HYP-2", "CT-HYP-3", "CT-PT-2"],
+  "decisions_relied_on": ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9", "M11", "M12", "M13", "M16", "M20"],
+  "equipment_required": ["barbell", "rack", "bench"],
+  "weeks": [
+    {"week": 1, "kind": "loading", "wave": 1},
+    {"week": 2, "kind": "loading", "wave": 2},
+    {"week": 3, "kind": "loading", "wave": 3},
+    {"week": 4, "kind": "deload"}
+  ],
+  "rest": {"main": "Rest 3 min", "main_heavy": "Rest 3-5 min", "supplemental": "Rest 2 min"},
+  "amrap": {"rir": "1-2", "cue": "as many strong reps as you can, leaving 1 to 2 in the tank"},
+  "supplemental": {"type": "fsl", "sets": 5},
+  "layouts": {
+    "4": {
+      "source": "L-15, A-2",
+      "days": [
+        {
+          "label": "Squat",
+          "extras": ["Warm-up: knee mobility"],
+          "main": ["Squat"],
+          "slots": [
+            {"id": "squat.unilateral", "pattern": "squat-unilateral", "kind": "compound",
+             "exercise": "Bulgarian Split Squat", "alternatives": ["Dumbbell Split Squat", "Dumbbell Lunge", "Goblet Squat"],
+             "sets": 3, "reps": "10-12", "rir": "2",
+             "by_type": {"HYP": {"exercise": "Hack Squat", "alternatives": ["Leg Press", "Pendulum Squat", "Smith Machine Squat"],
+                                 "sets": 2, "reps": "6-10", "rir": "0"}}},
+            {"id": "squat.hamstring", "pattern": "knee-flexion", "kind": "isolation",
+             "exercise": "Leg Curl", "alternatives": ["Seated Leg Curl", "Lying Leg Curl", "Nordic Curl"],
+             "sets": 3, "reps": "10-12", "rir": "2-3"},
+            {"id": "squat.trunk", "pattern": "trunk-flexion", "kind": "core",
+             "exercise": "Cable Crunch", "alternatives": ["Hanging Leg Raise", "Hanging Knee Raise", "Dead Bug"],
+             "sets": 3, "reps": "12-20", "rir": "2-4"}
+          ]
+        },
+        {
+          "label": "Bench",
+          "extras": ["Warm-up: upper mobility"],
+          "main": ["Bench Press"],
+          "slots": [
+            {"id": "bench.press", "pattern": "horizontal-press", "kind": "compound",
+             "exercise": "Dumbbell Bench Press", "alternatives": ["Machine Chest Press", "Dumbbell Incline Press", "Push Up"],
+             "sets": 3, "reps": "10-12", "rir": "2", "tempo": "Full ROM",
+             "by_type": {"HYP": {"exercise": "Machine Chest Press", "alternatives": ["Smith Machine Bench Press", "Dumbbell Bench Press"],
+                                 "sets": 2, "reps": "6-10", "rir": "0"}}},
+            {"id": "bench.row", "pattern": "horizontal-pull", "kind": "compound",
+             "exercise": "Dumbbell Row", "alternatives": ["Chest Supported Row", "Seated Cable Row", "Chin Up"],
+             "sets": 3, "reps": "10-12", "rir": "2",
+             "by_type": {"HYP": {"rir": "2-3"}}},
+            {"id": "bench.delts", "pattern": "shoulder-abduction", "kind": "isolation",
+             "exercise": "Lateral Raise", "alternatives": ["Cable Lateral Raise", "Machine Lateral Raise"],
+             "sets": 3, "reps": "12-15", "rir": "2-3", "amrap_last_set": true},
+            {"id": "bench.triceps", "pattern": "elbow-extension", "kind": "isolation",
+             "exercise": "Cable Tricep Pushdown", "alternatives": ["Rope Pushdown", "Dumbbell Tricep Extension", "Overhead Cable Extension"],
+             "sets": 3, "reps": "10-12", "rir": "2-3"}
+          ]
+        },
+        {
+          "label": "Deadlift",
+          "extras": ["Warm-up: hinge mobility"],
+          "main": ["Deadlift"],
+          "slots": [
+            {"id": "deadlift.hinge", "pattern": "hip-hinge", "kind": "compound",
+             "exercise": "Romanian Deadlift", "alternatives": ["Dumbbell Romanian Deadlift", "Back Extension", "Cable Pull Through"],
+             "sets": 3, "reps": "8-10", "rir": "2",
+             "by_type": {"HYP": {"sets": 2, "reps": "6-10", "rir": "1"}}},
+            {"id": "deadlift.squat", "pattern": "squat", "kind": "compound",
+             "exercise": "Leg Press", "alternatives": ["Goblet Squat", "Hack Squat", "Dumbbell Split Squat"],
+             "sets": 3, "reps": "10-12", "rir": "2",
+             "by_type": {"HYP": {"sets": 2, "reps": "6-10", "rir": "0"}}},
+            {"id": "deadlift.trunk", "pattern": "anti-extension", "kind": "core",
+             "exercise": "Ab Wheel Rollout", "alternatives": ["Cable Crunch", "Hanging Knee Raise", "Dead Bug"],
+             "sets": 3, "reps": "10-15", "rir": "2-4"}
+          ]
+        },
+        {
+          "label": "Press",
+          "extras": ["Warm-up: upper mobility"],
+          "main": ["Overhead Press"],
+          "slots": [
+            {"id": "press.incline", "pattern": "incline-press", "kind": "compound",
+             "exercise": "Dumbbell Incline Press", "alternatives": ["Machine Chest Press", "Dumbbell Bench Press", "Incline Bench Press"],
+             "sets": 3, "reps": "10-12", "rir": "2", "tempo": "Full ROM",
+             "by_type": {"HYP": {"sets": 2, "reps": "6-10", "rir": "1"}}},
+            {"id": "press.row", "pattern": "horizontal-pull", "kind": "compound",
+             "exercise": "Seated Cable Row", "alternatives": ["Chest Supported Row", "Dumbbell Row", "Lat Pulldown"],
+             "sets": 3, "reps": "10-12", "rir": "2",
+             "by_type": {"HYP": {"rir": "2-3"}}},
+            {"id": "press.pushup", "pattern": "horizontal-press", "kind": "compound",
+             "exercise": "Push Up", "alternatives": ["Incline Push Up", "Dips"],
+             "sets": 3, "reps": "10-15", "rir": "2"},
+            {"id": "press.triceps", "pattern": "elbow-extension", "kind": "isolation",
+             "exercise": "Rope Pushdown", "alternatives": ["Cable Tricep Pushdown", "Overhead Cable Extension", "Dumbbell Tricep Extension"],
+             "sets": 3, "reps": "10-12", "rir": "2-3", "amrap_last_set": true}
+          ]
+        }
+      ]
+    },
+    "3": {
+      "source": "CT-GEN-2: squat + bench, deadlift + OHP, then a full-body accessory day; no supplemental (L-14)",
+      "supplemental": null,
+      "days": [
+        {
+          "extras": ["Warm-up: knee mobility"],
+          "main": ["Squat", "Bench Press"],
+          "slots": [
+            {"id": "sb.row", "pattern": "horizontal-pull", "kind": "compound",
+             "exercise": "Dumbbell Row", "alternatives": ["Chest Supported Row", "Seated Cable Row", "Chin Up"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "sb.hamstring", "pattern": "knee-flexion", "kind": "isolation",
+             "exercise": "Leg Curl", "alternatives": ["Seated Leg Curl", "Lying Leg Curl", "Nordic Curl"],
+             "sets": 3, "reps": "10-12", "rir": "2-3"},
+            {"id": "sb.delts", "pattern": "shoulder-abduction", "kind": "isolation",
+             "exercise": "Lateral Raise", "alternatives": ["Cable Lateral Raise", "Machine Lateral Raise"],
+             "sets": 3, "reps": "12-15", "rir": "2-3", "amrap_last_set": true}
+          ]
+        },
+        {
+          "extras": ["Warm-up: hinge mobility"],
+          "main": ["Deadlift", "Overhead Press"],
+          "slots": [
+            {"id": "do.squat", "pattern": "squat", "kind": "compound",
+             "exercise": "Goblet Squat", "alternatives": ["Leg Press", "Dumbbell Split Squat", "Hack Squat"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "do.pull", "pattern": "vertical-pull", "kind": "compound",
+             "exercise": "Lat Pulldown", "alternatives": ["Chin Up", "Pull Up", "Seated Cable Row"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "do.trunk", "pattern": "trunk-flexion", "kind": "core",
+             "exercise": "Cable Crunch", "alternatives": ["Ab Wheel Rollout", "Hanging Knee Raise", "Dead Bug"],
+             "sets": 3, "reps": "12-20", "rir": "2-4"}
+          ]
+        },
+        {
+          "label": "Full body",
+          "extras": ["Warm-up: knee mobility"],
+          "slots": [
+            {"id": "fb.unilateral", "pattern": "squat-unilateral", "kind": "compound",
+             "exercise": "Bulgarian Split Squat", "alternatives": ["Dumbbell Split Squat", "Dumbbell Lunge", "Goblet Squat"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "fb.hinge", "pattern": "hip-hinge", "kind": "compound",
+             "exercise": "Romanian Deadlift", "alternatives": ["Dumbbell Romanian Deadlift", "Back Extension", "Cable Pull Through"],
+             "sets": 3, "reps": "8-10", "rir": "2"},
+            {"id": "fb.press", "pattern": "incline-press", "kind": "compound",
+             "exercise": "Dumbbell Incline Press", "alternatives": ["Machine Chest Press", "Dumbbell Bench Press", "Push Up"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "fb.row", "pattern": "horizontal-pull", "kind": "compound",
+             "exercise": "Seated Cable Row", "alternatives": ["Chest Supported Row", "Dumbbell Row", "Inverted Row"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "fb.triceps", "pattern": "elbow-extension", "kind": "isolation",
+             "exercise": "Cable Tricep Pushdown", "alternatives": ["Rope Pushdown", "Dumbbell Tricep Extension", "Overhead Cable Extension"],
+             "sets": 3, "reps": "10-12", "rir": "2-3", "amrap_last_set": true}
+          ]
+        }
+      ]
+    },
+    "2": {
+      "source": "CT-GEN-2: squat + bench, then deadlift + OHP; no supplemental (L-14)",
+      "supplemental": null,
+      "days": [
+        {
+          "extras": ["Warm-up: knee mobility"],
+          "main": ["Squat", "Bench Press"],
+          "slots": [
+            {"id": "sb.hinge", "pattern": "hip-hinge", "kind": "compound",
+             "exercise": "Romanian Deadlift", "alternatives": ["Dumbbell Romanian Deadlift", "Back Extension", "Cable Pull Through"],
+             "sets": 3, "reps": "8-10", "rir": "2"},
+            {"id": "sb.row", "pattern": "horizontal-pull", "kind": "compound",
+             "exercise": "Dumbbell Row", "alternatives": ["Chest Supported Row", "Seated Cable Row", "Chin Up"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "sb.delts", "pattern": "shoulder-abduction", "kind": "isolation",
+             "exercise": "Lateral Raise", "alternatives": ["Cable Lateral Raise", "Machine Lateral Raise"],
+             "sets": 3, "reps": "12-15", "rir": "2-3", "amrap_last_set": true}
+          ]
+        },
+        {
+          "extras": ["Warm-up: hinge mobility"],
+          "main": ["Deadlift", "Overhead Press"],
+          "slots": [
+            {"id": "do.squat", "pattern": "squat", "kind": "compound",
+             "exercise": "Goblet Squat", "alternatives": ["Leg Press", "Dumbbell Split Squat", "Hack Squat"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "do.pull", "pattern": "vertical-pull", "kind": "compound",
+             "exercise": "Lat Pulldown", "alternatives": ["Chin Up", "Pull Up", "Seated Cable Row"],
+             "sets": 3, "reps": "10-12", "rir": "2"},
+            {"id": "do.trunk", "pattern": "trunk-flexion", "kind": "core",
+             "exercise": "Cable Crunch", "alternatives": ["Ab Wheel Rollout", "Hanging Knee Raise", "Dead Bug"],
+             "sets": 3, "reps": "12-20", "rir": "2-4"}
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-GEN-1: each pattern gets a second weekly exposure through the accessories (a squat pattern on deadlift day, a press on OHP day).",
+    "A-2 pairs a goblet or front squat with squat day; with FSL that would put quadriceps over P-7's 11 sets in one session, so squat day carries a leg curl instead.",
+    "CT-PT-2: each day opens with the mobility block for its pattern (knee, hinge or upper): 5 min rower or bike, three 1-set drills, then Shoulder Big 3 1 x 15 each."
+  ],
+  "notes_by_type": {
+    "HYP": [
+      "CT-HYP-2, L-14: FSL plus hard sets: the first compound slot of each day becomes 2 hard sets of 6-10 at RIR 0 (RIR 1 on free-weight compounds, CT-HYP-3), and the next compound moves to RIR 2-3. This applies on the 4-day layout only.",
+      "CT-HYP-4: name 2 to 4 priority muscles from the lifter's answers in program.priority_muscles; P-3 holds them to 10-20 sets a week."
+    ]
+  }
+}

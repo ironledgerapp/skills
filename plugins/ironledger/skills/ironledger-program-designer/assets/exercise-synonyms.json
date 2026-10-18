@@ -1,0 +1,955 @@
+{
+  "about": "Names as lifters and programs commonly write them, plus the LB-2 to LB-5 examples, each mapped to the exact IronLedger library name it means (F-7, LB-1). Only unambiguous mappings are listed: the target has the same movement and primary muscle. library.normalize() also matches a library name, an approved alias or an entry here ignoring case and punctuation, as IronLedger itself does (LB-1); it never guesses beyond that. 'unmapped' records names that are deliberately not mapped, with the reason and the library or alias candidates to choose from. Built 2026-09-23.",
+  "synonyms": {
+    "Squats": "Squat",
+    "Barbell Back Squat": "Squat",
+    "Barbell Back Squats": "Squat",
+    "BB Back Squat": "Squat",
+    "Barbell Squat": "Squat",
+    "High Bar Barbell Back Squat": "High Bar Squat",
+    "High Bar Back Squat": "High Bar Squat",
+    "High Bar": "High Bar Squat",
+    "High Bar Squats": "High Bar Squat",
+    "Low Bar Barbell Back Squat": "Low Bar Squat",
+    "Low Bar Back Squat": "Low Bar Squat",
+    "Low Bar": "Low Bar Squat",
+    "Low Bar Squats": "Low Bar Squat",
+    "SSB": "Safety Bar Squat",
+    "SSB Squat": "Safety Bar Squat",
+    "SSB Squats": "Safety Bar Squat",
+    "Safety Squat Bar Squat": "Safety Bar Squat",
+    "Safety Bar Squats": "Safety Bar Squat",
+    "Paused Squat": "Pause Squat",
+    "Pause Squats": "Pause Squat",
+    "Paused Squats": "Pause Squat",
+    "Tempo Squats": "Tempo Squat",
+    "Front Squats": "Front Squat",
+    "Barbell Front Squat": "Front Squat",
+    "BB Front Squat": "Front Squat",
+    "Goblet Squats": "Goblet Squat",
+    "DB Goblet Squat": "Goblet Squat",
+    "Dumbbell Goblet Squat": "Goblet Squat",
+    "Hack Squats": "Hack Squat",
+    "Pendulum Squats": "Pendulum Squat",
+    "Belt Squats": "Belt Squat",
+    "Bodyweight Squats": "Bodyweight Squat",
+    "BW Squat": "Bodyweight Squat",
+    "BW Squats": "Bodyweight Squat",
+    "Air Squat": "Bodyweight Squat",
+    "Air Squats": "Bodyweight Squat",
+    "Leg Presses": "Leg Press",
+    "High Foot Leg Press": "Leg Press",
+    "Leg Press High Foot": "Leg Press",
+    "Leg Press High/Wide": "Leg Press",
+    "High/Wide Leg Press": "Leg Press",
+    "Deadlifts": "Deadlift",
+    "DL": "Deadlift",
+    "Barbell Deadlift": "Deadlift",
+    "BB Deadlift": "Deadlift",
+    "Competition Deadlift": "Deadlift",
+    "Sumo": "Sumo Deadlift",
+    "Sumo Deadlifts": "Sumo Deadlift",
+    "Sumo DL": "Sumo Deadlift",
+    "Deficit Deadlifts": "Deficit Deadlift",
+    "Deficit DL": "Deficit Deadlift",
+    "Block Pulls": "Block Pull",
+    "Rack Pulls": "Rack Pull",
+    "RDL": "Romanian Deadlift",
+    "RDLs": "Romanian Deadlift",
+    "Romanian Deadlifts": "Romanian Deadlift",
+    "Barbell RDL": "Romanian Deadlift",
+    "BB RDL": "Romanian Deadlift",
+    "Barbell Romanian Deadlift": "Romanian Deadlift",
+    "DB RDL": "Dumbbell Romanian Deadlift",
+    "DB RDLs": "Dumbbell Romanian Deadlift",
+    "Dumbbell RDL": "Dumbbell Romanian Deadlift",
+    "DB Romanian Deadlift": "Dumbbell Romanian Deadlift",
+    "SLDL": "Stiff Leg Deadlift",
+    "Straight-Leg Deadlift": "Stiff Leg Deadlift",
+    "Straight Leg Deadlift": "Stiff Leg Deadlift",
+    "Straight-Leg DL": "Stiff Leg Deadlift",
+    "Straight Leg DL": "Stiff Leg Deadlift",
+    "Stiff Leg Deadlifts": "Stiff Leg Deadlift",
+    "Good Mornings": "Good Morning",
+    "Barbell Good Morning": "Good Morning",
+    "BB Good Morning": "Good Morning",
+    "Bench": "Bench Press",
+    "Becnh": "Bench Press",
+    "Barbell Bench Press": "Bench Press",
+    "BB Bench": "Bench Press",
+    "BB Bench Press": "Bench Press",
+    "Flat Bench": "Bench Press",
+    "Flat Bench Press": "Bench Press",
+    "Competition Bench": "Bench Press",
+    "Competition Bench Press": "Bench Press",
+    "Comp Bench": "Bench Press",
+    "Pause Bench Press": "Paused Bench Press",
+    "Pause Bench": "Paused Bench Press",
+    "Paused Bench": "Paused Bench Press",
+    "Paused Bench Presses": "Paused Bench Press",
+    "CGBP": "Close Grip Bench Press",
+    "Close-Grip Bench": "Close Grip Bench Press",
+    "Close Grip Bench": "Close Grip Bench Press",
+    "Close Grip Bench Presses": "Close Grip Bench Press",
+    "Larsen": "Larsen Press",
+    "Larsen Bench Press": "Larsen Press",
+    "Larsen Presses": "Larsen Press",
+    "Spoto": "Spoto Press",
+    "Spoto Presses": "Spoto Press",
+    "Floor Presses": "Floor Press",
+    "Incline Bench": "Incline Bench Press",
+    "Barbell Incline Press": "Incline Bench Press",
+    "Barbell Incline Bench Press": "Incline Bench Press",
+    "BB Incline Press": "Incline Bench Press",
+    "Incline Barbell Press": "Incline Bench Press",
+    "Incline Dumbbell Press": "Dumbbell Incline Press",
+    "inclind Dumbbell Press": "Dumbbell Incline Press",
+    "Incline DB Press": "Dumbbell Incline Press",
+    "DB Incline Press": "Dumbbell Incline Press",
+    "DB Incline": "Dumbbell Incline Press",
+    "Dumbbell Incline": "Dumbbell Incline Press",
+    "Incline Dumbell Press": "Dumbbell Incline Press",
+    "Dumbell Incline Press": "Dumbbell Incline Press",
+    "Incline Dumbbell Bench Press": "Dumbbell Incline Press",
+    "DB Incline Bench Press": "Dumbbell Incline Press",
+    "Incline Dumbbell Presses": "Dumbbell Incline Press",
+    "DB Bench": "Dumbbell Bench Press",
+    "DB Bench Press": "Dumbbell Bench Press",
+    "Dumbbell Bench": "Dumbbell Bench Press",
+    "DB Chest Press": "Dumbbell Bench Press",
+    "Dumbbell Chest Press": "Dumbbell Bench Press",
+    "Flat DB Press": "Dumbbell Bench Press",
+    "Flat Dumbbell Press": "Dumbbell Bench Press",
+    "Dumbell Bench Press": "Dumbbell Bench Press",
+    "Push-Ups": "Push Up",
+    "Push Ups": "Push Up",
+    "Pushups": "Push Up",
+    "Pushup": "Push Up",
+    "Incline Push-Ups": "Incline Push Up",
+    "Incline Push Ups": "Incline Push Up",
+    "Dip": "Dips",
+    "BW Dips": "Dips",
+    "Bodyweight Dips": "Dips",
+    "Smith Bench": "Smith Machine Bench Press",
+    "Smith Bench Press": "Smith Machine Bench Press",
+    "OHP": "Overhead Press",
+    "O/H Press": "Overhead Press",
+    "Strict Press": "Overhead Press",
+    "Strict Overhead Press": "Overhead Press",
+    "Standing Overhead Press": "Overhead Press",
+    "Standing OHP": "Overhead Press",
+    "Barbell Overhead Press": "Overhead Press",
+    "BB OHP": "Overhead Press",
+    "Strict (Seated) Overhead Press": "Seated Overhead Press",
+    "Seated OHP": "Seated Overhead Press",
+    "Seated Barbell Overhead Press": "Seated Overhead Press",
+    "Seated Strict Press": "Seated Overhead Press",
+    "DB OHP": "Dumbbell Shoulder Press",
+    "DB Overhead Press": "Dumbbell Shoulder Press",
+    "Dumbbell Overhead Press": "Dumbbell Shoulder Press",
+    "Dumbbell OHP": "Dumbbell Shoulder Press",
+    "DB Shoulder Press": "Dumbbell Shoulder Press",
+    "Dumbell Shoulder Press": "Dumbbell Shoulder Press",
+    "Seated DB Press": "Seated Dumbbell Press",
+    "Seated Dumbbell Shoulder Press": "Seated Dumbbell Press",
+    "Seated DB Shoulder Press": "Seated Dumbbell Press",
+    "Machine Shoulder Presses": "Machine Shoulder Press",
+    "Shoulder Press Machine": "Machine Shoulder Press",
+    "Push Presses": "Push Press",
+    "Pull-Ups": "Pull Up",
+    "Pull Ups": "Pull Up",
+    "Pullups": "Pull Up",
+    "Pullup": "Pull Up",
+    "Heaves": "Pull Up",
+    "Over-Grasp Heaves": "Pull Up",
+    "Chin-Ups": "Chin Up",
+    "Chin Ups": "Chin Up",
+    "Chinups": "Chin Up",
+    "Chinup": "Chin Up",
+    "Neutral Grip Pull-Ups": "Neutral Grip Pull Up",
+    "Neutral Grip Pull Ups": "Neutral Grip Pull Up",
+    "Lat Pulldowns": "Lat Pulldown",
+    "Lat Pull Down": "Lat Pulldown",
+    "Lat Pull Downs": "Lat Pulldown",
+    "Pulldown": "Lat Pulldown",
+    "Pulldowns": "Lat Pulldown",
+    "Lat Pulldown Machine": "Lat Pulldown",
+    "Barbell Rows": "Barbell Row",
+    "BB Row": "Barbell Row",
+    "BB Rows": "Barbell Row",
+    "Bent-Over Row": "Barbell Row",
+    "Bent-Over Rows": "Barbell Row",
+    "Bent Over Rows": "Barbell Row",
+    "Bent-Over Barbell Row": "Barbell Row",
+    "Pendlay Rows": "Pendlay Row",
+    "T-Bar Rows": "T-Bar Row",
+    "T Bar Rows": "T-Bar Row",
+    "DB Row": "Dumbbell Row",
+    "DB Rows": "Dumbbell Row",
+    "Dumbbell Rows": "Dumbbell Row",
+    "Single-Arm DB Row": "Dumbbell Row",
+    "Single Arm DB Row": "Dumbbell Row",
+    "Single-Arm Dumbbell Row": "Dumbbell Row",
+    "Single Arm Dumbbell Row": "Dumbbell Row",
+    "DB Single-Arm Row": "Dumbbell Row",
+    "DB Single Arm Row": "Dumbbell Row",
+    "One-Arm DB Row": "Dumbbell Row",
+    "One Arm Dumbbell Row": "Dumbbell Row",
+    "Chest-Supported Rows": "Chest Supported Row",
+    "Chest Supported Rows": "Chest Supported Row",
+    "Cable Row": "Seated Cable Row",
+    "Cable Rows": "Seated Cable Row",
+    "Seated Cable Rows": "Seated Cable Row",
+    "Inverted Rows": "Inverted Row",
+    "Face Pulls": "Face Pull",
+    "Cable Face Pull": "Face Pull",
+    "Cable Face Pulls": "Face Pull",
+    "Pec-Dec Rear Delt Flyes": "Reverse Pec Deck",
+    "Pec Dec Rear Delt Fly": "Reverse Pec Deck",
+    "Pec Deck Rear Delt Fly": "Reverse Pec Deck",
+    "Reverse Pec Dec": "Reverse Pec Deck",
+    "Rear Delt Pec Deck": "Reverse Pec Deck",
+    "Rear Delt Flyes": "Rear Delt Fly",
+    "Rear Delt Flys": "Rear Delt Fly",
+    "Rear Delt Flies": "Rear Delt Fly",
+    "DB Rear Delt Fly": "Rear Delt Fly",
+    "Dumbbell Rear Delt Fly": "Rear Delt Fly",
+    "Lateral Raises": "Lateral Raise",
+    "Laterals": "Lateral Raise",
+    "DB Lateral Raise": "Lateral Raise",
+    "DB Lateral Raises": "Lateral Raise",
+    "DB Laterals": "Lateral Raise",
+    "Dumbbell Lateral Raise": "Lateral Raise",
+    "Dumbbell Lateral Raises": "Lateral Raise",
+    "Side Lateral Raise": "Lateral Raise",
+    "Side Raises": "Lateral Raise",
+    "Cable Lateral Raises": "Cable Lateral Raise",
+    "Cable Laterals": "Cable Lateral Raise",
+    "Machine Laterals": "Machine Lateral Raise",
+    "Machine Lateral Raises": "Machine Lateral Raise",
+    "Upright Rows": "Upright Row",
+    "Barbell Upright Row": "Upright Row",
+    "DB Upright Row": "Dumbbell Upright Row",
+    "Barbell Shrugs": "Barbell Shrug",
+    "BB Shrug": "Barbell Shrug",
+    "BB Shrugs": "Barbell Shrug",
+    "DB Shrug": "Dumbbell Shrug",
+    "DB Shrugs": "Dumbbell Shrug",
+    "Dumbbell Shrugs": "Dumbbell Shrug",
+    "DB Fly": "Dumbbell Fly",
+    "DB Flyes": "Dumbbell Fly",
+    "Dumbbell Flyes": "Dumbbell Fly",
+    "Dumbbell Flys": "Dumbbell Fly",
+    "Dumbbell Flies": "Dumbbell Fly",
+    "Incline DB Fly": "Incline Dumbbell Fly",
+    "Incline Dumbbell Flyes": "Incline Dumbbell Fly",
+    "Cable Flyes": "Cable Fly",
+    "Cable Flys": "Cable Fly",
+    "Cable Flies": "Cable Fly",
+    "Pec Dec": "Pec Deck",
+    "Pec-Dec": "Pec Deck",
+    "Pec Deck Fly": "Pec Deck",
+    "Pec Deck Machine": "Pec Deck",
+    "Bulgarian Split Squats": "Bulgarian Split Squat",
+    "BSS": "Bulgarian Split Squat",
+    "Bulgarians": "Bulgarian Split Squat",
+    "DB Bulgarian Split Squat": "Bulgarian Split Squat",
+    "Dumbbell Bulgarian Split Squat": "Bulgarian Split Squat",
+    "Barbell Bulgarian Split Squat": "Bulgarian Split Squat",
+    "BB Bulgarian Split Squat": "Bulgarian Split Squat",
+    "Barbell Lunges": "Barbell Lunge",
+    "BB Lunge": "Barbell Lunge",
+    "BB Lunges": "Barbell Lunge",
+    "Walking Lunges": "Walking Lunge",
+    "DB Lunge": "Dumbbell Lunge",
+    "DB Lunges": "Dumbbell Lunge",
+    "Dumbbell Lunges": "Dumbbell Lunge",
+    "DB Step Up": "Dumbbell Step Up",
+    "DB Step-Ups": "Dumbbell Step Up",
+    "DB Step Ups": "Dumbbell Step Up",
+    "Dumbbell Step-Ups": "Dumbbell Step Up",
+    "Dumbbell Step Ups": "Dumbbell Step Up",
+    "Pistol Squats": "Pistol Squat",
+    "Leg Curls": "Leg Curl",
+    "Hamstring Curl": "Leg Curl",
+    "Hamstring Curls": "Leg Curl",
+    "Hamstring Curl Machine": "Leg Curl",
+    "Machine Hamstring Curl": "Leg Curl",
+    "Leg Curl Machine": "Leg Curl",
+    "Seated Hamstring Curl": "Seated Leg Curl",
+    "Seated Hamstring Curls": "Seated Leg Curl",
+    "Seated Leg Curls": "Seated Leg Curl",
+    "Lying Hamstring Curl": "Lying Leg Curl",
+    "Lying Hamstring Curls": "Lying Leg Curl",
+    "Lying Leg Curls": "Lying Leg Curl",
+    "Nordic Curls": "Nordic Curl",
+    "Nordics": "Nordic Curl",
+    "Nordic Hamstring Curl": "Nordic Curl",
+    "Nordic Hamstring Curls": "Nordic Curl",
+    "Nordic Hamstring Exercise": "Nordic Curl",
+    "NHE": "Nordic Curl",
+    "Glute Ham Raises": "Glute Ham Raise",
+    "Glute-Ham Raises": "Glute Ham Raise",
+    "GHR": "Glute Ham Raise",
+    "Leg Extensions": "Leg Extension",
+    "Knee Extension": "Leg Extension",
+    "Knee Extensions": "Leg Extension",
+    "Leg Extension Machine": "Leg Extension",
+    "Hip Thrusts": "Hip Thrust",
+    "Barbell Hip Thrust": "Hip Thrust",
+    "Barbell Hip Thrusts": "Hip Thrust",
+    "BB Hip Thrust": "Hip Thrust",
+    "DB Hip Thrust": "Dumbbell Hip Thrust",
+    "DB Hip Thrusts": "Dumbbell Hip Thrust",
+    "Glute Bridges": "Glute Bridge",
+    "Barbell Glute Bridges": "Barbell Glute Bridge",
+    "BB Glute Bridge": "Barbell Glute Bridge",
+    "Back Extensions": "Back Extension",
+    "Hyperextensions": "Hyperextension",
+    "Adductor Machine": "Hip Adduction Machine",
+    "Hip Adductor Machine": "Hip Adduction Machine",
+    "Adduction Machine": "Hip Adduction Machine",
+    "Abductor Machine": "Hip Abduction Machine",
+    "Hip Abductor Machine": "Hip Abduction Machine",
+    "Abduction Machine": "Hip Abduction Machine",
+    "Kettlebell Swings": "Kettlebell Swing",
+    "KB Swing": "Kettlebell Swing",
+    "KB Swings": "Kettlebell Swing",
+    "Standing Calf Raises": "Standing Calf Raise",
+    "Seated Calf Raises": "Seated Calf Raise",
+    "Bodyweight Calf Raises": "Bodyweight Calf Raise",
+    "BW Calf Raise": "Bodyweight Calf Raise",
+    "BW Calf Raises": "Bodyweight Calf Raise",
+    "DB Calf Raise": "Dumbbell Calf Raise",
+    "DB Calf Raises": "Dumbbell Calf Raise",
+    "Barbell Curls": "Barbell Curl",
+    "BB Curl": "Barbell Curl",
+    "BB Curls": "Barbell Curl",
+    "Straight Bar Curl": "Barbell Curl",
+    "Hammer Curls": "Hammer Curl",
+    "DB Hammer Curl": "Hammer Curl",
+    "DB Hammer Curls": "Hammer Curl",
+    "Preacher Curls": "Preacher Curl",
+    "DB Curl": "Dumbbell Curl",
+    "DB Curls": "Dumbbell Curl",
+    "Dumbbell Curls": "Dumbbell Curl",
+    "DB Bicep Curl": "Dumbbell Curl",
+    "Dumbbell Bicep Curl": "Dumbbell Curl",
+    "EZ Curl": "EZ Bar Curl",
+    "EZ Bar Curls": "EZ Bar Curl",
+    "Machine Curls": "Machine Curl",
+    "Bicep Curl Machine": "Machine Curl",
+    "Cable Curls": "Cable Curl",
+    "Incline DB Curl": "Incline Dumbbell Curl",
+    "Incline Dumbbell Curls": "Incline Dumbbell Curl",
+    "Skull Crushers": "Skull Crusher",
+    "Skullcrusher": "Skull Crusher",
+    "Skullcrushers": "Skull Crusher",
+    "EZ Bar Skull Crusher": "Skull Crusher",
+    "Tricep Pushdown": "Cable Tricep Pushdown",
+    "Tricep Pushdowns": "Cable Tricep Pushdown",
+    "Triceps Pushdown": "Cable Tricep Pushdown",
+    "Triceps Pushdowns": "Cable Tricep Pushdown",
+    "Cable Tricep Pushdowns": "Cable Tricep Pushdown",
+    "Cable Pushdown": "Cable Tricep Pushdown",
+    "Pushdowns": "Cable Tricep Pushdown",
+    "Rope Pushdowns": "Rope Pushdown",
+    "Rope Tricep Pushdown": "Rope Pushdown",
+    "Overhead Tricep Extensions": "Overhead Tricep Extension",
+    "DB Overhead Tricep Extension": "Overhead Tricep Extension",
+    "Triceps Dips": "Tricep Dips",
+    "Bench Dip": "Bench Dips",
+    "Diamond Push-Ups": "Diamond Push Up",
+    "Diamond Push Ups": "Diamond Push Up",
+    "Crunches": "Crunch",
+    "Cable Crunches": "Cable Crunch",
+    "Decline Crunches": "Decline Crunch",
+    "Sit-Ups": "Sit Up",
+    "Sit Ups": "Sit Up",
+    "Situps": "Sit Up",
+    "Situp": "Sit Up",
+    "Hanging Leg Raises": "Hanging Leg Raise",
+    "HLR": "Hanging Leg Raise",
+    "Hanging Knee Raises": "Hanging Knee Raise",
+    "Leg Raises": "Leg Raise",
+    "Planks": "Plank",
+    "Side Planks": "Side Plank",
+    "Dead Bugs": "Dead Bug",
+    "Deadbug": "Dead Bug",
+    "Deadbugs": "Dead Bug",
+    "Pallof Presses": "Pallof Press",
+    "Pallof": "Pallof Press",
+    "Ab Wheel": "Ab Wheel Rollout",
+    "Ab Rollout": "Ab Wheel Rollout",
+    "Ab Rollouts": "Ab Wheel Rollout",
+    "Ab Wheel Rollouts": "Ab Wheel Rollout",
+    "Woodchop": "Cable Woodchop",
+    "Woodchops": "Cable Woodchop",
+    "Cable Woodchops": "Cable Woodchop",
+    "Wood Chop": "Cable Woodchop",
+    "Wood Chops": "Cable Woodchop",
+    "Farmer's Carries": "Farmer's Walk",
+    "Farmer's Carry": "Farmer's Walk",
+    "Farmers Carry": "Farmer's Walk",
+    "Farmers Carries": "Farmer's Walk",
+    "Farmers Walk": "Farmer's Walk",
+    "Farmer's Walks": "Farmer's Walk",
+    "Farmer Carry": "Farmer's Walk",
+    "Farmer Walk": "Farmer's Walk",
+    "Rower": "Rowing Machine",
+    "Row Erg": "Rowing Machine",
+    "Rowing Ergometer": "Rowing Machine",
+    "Exercise Bike": "Stationary Bike",
+    "Spin Bike": "Stationary Bike",
+    "Jump Ropes": "Jump Rope",
+    "Skipping": "Jump Rope",
+    "Skipping Rope": "Jump Rope",
+    "Sled Pushes": "Sled Push",
+    "Prowler Push": "Sled Push",
+    "Mountain Climbers": "Mountain Climber",
+    "Burpees": "Burpee",
+    "Battle Rope": "Battle Ropes",
+    "Power Cleans": "Power Clean",
+    "Hang Cleans": "Hang Clean",
+    "Turkish Get-Ups": "Turkish Get Up",
+    "Turkish Get Ups": "Turkish Get Up",
+    "TGU": "Turkish Get Up",
+    "Squat (Top Set)": "Squat",
+    "Squat (Warm-up)": "Squat",
+    "Bench Press (Back-off)": "Bench Press"
+  },
+  "unmapped": {
+    "Weighted Chin-Ups": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Chin-Up": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Chin Up": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Chin Ups": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Pull-Ups": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Pull Up": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Weighted Pull Ups": {
+      "reason": "LB-3: filing a weighted chin-up or pull-up under Chin Up or Pull Up merges it into the bodyweight record. An alias called 'Weighted Chin Up' scores 0.8 against Chin Up and would block import (LB-9), so there is no alias either. The lifter decides the name.",
+      "candidates": [
+        "Chin Up",
+        "Pull Up"
+      ]
+    },
+    "Goblet Box Squat": {
+      "reason": "No library name. Box Squat is a barbell exercise and Goblet Squat has no box. An alias scores 0.8 against both (LB-2). Choose one and put the box or the implement in Notes (IL-18).",
+      "candidates": [
+        "Box Squat",
+        "Goblet Squat"
+      ]
+    },
+    "Goblet Box Squats": {
+      "reason": "No library name. Box Squat is a barbell exercise and Goblet Squat has no box. An alias scores 0.8 against both (LB-2). Choose one and put the box or the implement in Notes (IL-18).",
+      "candidates": [
+        "Box Squat",
+        "Goblet Squat"
+      ]
+    },
+    "BW Box Squats": {
+      "reason": "No library name. Box Squat is a barbell exercise and Goblet Squat has no box. An alias scores 0.8 against both (LB-2). Choose one and put the box or the implement in Notes (IL-18).",
+      "candidates": [
+        "Box Squat",
+        "Goblet Squat"
+      ]
+    },
+    "Bodyweight Box Squat": {
+      "reason": "No library name. Box Squat is a barbell exercise and Goblet Squat has no box. An alias scores 0.8 against both (LB-2). Choose one and put the box or the implement in Notes (IL-18).",
+      "candidates": [
+        "Box Squat",
+        "Goblet Squat"
+      ]
+    },
+    "Smith Front Squat": {
+      "reason": "No library name, and an alias scores 0.8 or more against Front Squat or Smith Machine Squat (LB-2).",
+      "candidates": [
+        "Smith Machine Squat",
+        "Front Squat"
+      ]
+    },
+    "Smith Machine Front Squat": {
+      "reason": "No library name, and an alias scores 0.8 or more against Front Squat or Smith Machine Squat (LB-2).",
+      "candidates": [
+        "Smith Machine Squat",
+        "Front Squat"
+      ]
+    },
+    "Smith RDL": {
+      "reason": "No Smith version in the library; a barbell RDL is the usual swap.",
+      "candidates": [
+        "Romanian Deadlift"
+      ]
+    },
+    "Smith Romanian Deadlift": {
+      "reason": "No Smith version in the library; a barbell RDL is the usual swap.",
+      "candidates": [
+        "Romanian Deadlift"
+      ]
+    },
+    "Feet-Up DB Press": {
+      "reason": "No library name for a feet-up dumbbell press.",
+      "candidates": [
+        "Dumbbell Bench Press",
+        "Larsen Press"
+      ]
+    },
+    "Feet Up DB Press": {
+      "reason": "No library name for a feet-up dumbbell press.",
+      "candidates": [
+        "Dumbbell Bench Press",
+        "Larsen Press"
+      ]
+    },
+    "Feet-Up Dumbbell Press": {
+      "reason": "No library name for a feet-up dumbbell press.",
+      "candidates": [
+        "Dumbbell Bench Press",
+        "Larsen Press"
+      ]
+    },
+    "B-Stance RDL": {
+      "reason": "A hinge variation with no library name.",
+      "candidates": [
+        "Romanian Deadlift",
+        "Dumbbell Romanian Deadlift"
+      ]
+    },
+    "B Stance RDL": {
+      "reason": "A hinge variation with no library name.",
+      "candidates": [
+        "Romanian Deadlift",
+        "Dumbbell Romanian Deadlift"
+      ]
+    },
+    "SSB Good Morning": {
+      "reason": "The library has only the barbell Good Morning.",
+      "candidates": [
+        "Good Morning"
+      ]
+    },
+    "Safety Bar Good Morning": {
+      "reason": "The library has only the barbell Good Morning.",
+      "candidates": [
+        "Good Morning"
+      ]
+    },
+    "Duffalo Bar Bench Press": {
+      "reason": "A specialty bench bar with no library name.",
+      "candidates": [
+        "Close Grip Bench Press",
+        "Bench Press"
+      ]
+    },
+    "Duffalo Bench": {
+      "reason": "A specialty bench bar with no library name.",
+      "candidates": [
+        "Close Grip Bench Press",
+        "Bench Press"
+      ]
+    },
+    "Tempo Bench Press": {
+      "reason": "No library name: write Bench Press with the tempo token in Notes, e.g. 'Tempo 2-1-0' (CT-PLO-15, IL-14).",
+      "candidates": [
+        "Bench Press"
+      ]
+    },
+    "Tempo Bench": {
+      "reason": "No library name: write Bench Press with the tempo token in Notes, e.g. 'Tempo 2-1-0' (CT-PLO-15, IL-14).",
+      "candidates": [
+        "Bench Press"
+      ]
+    },
+    "Tempo Deadlift": {
+      "reason": "No library name: write Deadlift with the tempo in Notes (CT-PLO-15).",
+      "candidates": [
+        "Deadlift"
+      ]
+    },
+    "Tempo to the Knee Deadlift": {
+      "reason": "No library name: write Deadlift with the tempo in Notes (CT-PLO-15).",
+      "candidates": [
+        "Deadlift"
+      ]
+    },
+    "Seated Flyes": {
+      "reason": "Ambiguous between a machine, cable or dumbbell fly.",
+      "candidates": [
+        "Pec Deck",
+        "Cable Fly",
+        "Dumbbell Fly"
+      ]
+    },
+    "Seated Chest Flyes": {
+      "reason": "Ambiguous between a machine, cable or dumbbell fly.",
+      "candidates": [
+        "Pec Deck",
+        "Cable Fly",
+        "Dumbbell Fly"
+      ]
+    },
+    "Flyes": {
+      "reason": "Ambiguous between a machine, cable or dumbbell fly.",
+      "candidates": [
+        "Pec Deck",
+        "Cable Fly",
+        "Dumbbell Fly"
+      ]
+    },
+    "Flys": {
+      "reason": "Ambiguous between a machine, cable or dumbbell fly.",
+      "candidates": [
+        "Pec Deck",
+        "Cable Fly",
+        "Dumbbell Fly"
+      ]
+    },
+    "Flies": {
+      "reason": "Ambiguous between a machine, cable or dumbbell fly.",
+      "candidates": [
+        "Pec Deck",
+        "Cable Fly",
+        "Dumbbell Fly"
+      ]
+    },
+    "Pullover": {
+      "reason": "Ambiguous, and the two library pullovers have different primary muscles: chest and lats.",
+      "candidates": [
+        "Dumbbell Pullover",
+        "Dumbbell Pullover (Back Focus)"
+      ]
+    },
+    "Pullovers": {
+      "reason": "Ambiguous, and the two library pullovers have different primary muscles: chest and lats.",
+      "candidates": [
+        "Dumbbell Pullover",
+        "Dumbbell Pullover (Back Focus)"
+      ]
+    },
+    "DB Pullover": {
+      "reason": "Ambiguous, and the two library pullovers have different primary muscles: chest and lats.",
+      "candidates": [
+        "Dumbbell Pullover",
+        "Dumbbell Pullover (Back Focus)"
+      ]
+    },
+    "Shrugs": {
+      "reason": "Ambiguous implement.",
+      "candidates": [
+        "Barbell Shrug",
+        "Dumbbell Shrug"
+      ]
+    },
+    "Shrug": {
+      "reason": "Ambiguous implement.",
+      "candidates": [
+        "Barbell Shrug",
+        "Dumbbell Shrug"
+      ]
+    },
+    "Calf Raises": {
+      "reason": "Ambiguous: machine, bodyweight or dumbbell.",
+      "candidates": [
+        "Standing Calf Raise",
+        "Bodyweight Calf Raise",
+        "Dumbbell Calf Raise",
+        "Seated Calf Raise"
+      ]
+    },
+    "Calf Raise": {
+      "reason": "Ambiguous: machine, bodyweight or dumbbell.",
+      "candidates": [
+        "Standing Calf Raise",
+        "Bodyweight Calf Raise",
+        "Dumbbell Calf Raise",
+        "Seated Calf Raise"
+      ]
+    },
+    "Single-Leg Calf Raises": {
+      "reason": "Ambiguous: machine, bodyweight or dumbbell.",
+      "candidates": [
+        "Standing Calf Raise",
+        "Bodyweight Calf Raise",
+        "Dumbbell Calf Raise",
+        "Seated Calf Raise"
+      ]
+    },
+    "Single-Leg Calf Raise": {
+      "reason": "Ambiguous: machine, bodyweight or dumbbell.",
+      "candidates": [
+        "Standing Calf Raise",
+        "Bodyweight Calf Raise",
+        "Dumbbell Calf Raise",
+        "Seated Calf Raise"
+      ]
+    },
+    "Single Leg Calf Raises": {
+      "reason": "Ambiguous: machine, bodyweight or dumbbell.",
+      "candidates": [
+        "Standing Calf Raise",
+        "Bodyweight Calf Raise",
+        "Dumbbell Calf Raise",
+        "Seated Calf Raise"
+      ]
+    },
+    "Lunges": {
+      "reason": "Ambiguous implement and style.",
+      "candidates": [
+        "Dumbbell Lunge",
+        "Barbell Lunge",
+        "Walking Lunge",
+        "Reverse Lunge"
+      ]
+    },
+    "Lunge": {
+      "reason": "Ambiguous implement and style.",
+      "candidates": [
+        "Dumbbell Lunge",
+        "Barbell Lunge",
+        "Walking Lunge",
+        "Reverse Lunge"
+      ]
+    },
+    "Step-Ups": {
+      "reason": "The library has only Dumbbell Step Up; a barbell step-up has no library name, so ask which implement.",
+      "candidates": [
+        "Dumbbell Step Up"
+      ]
+    },
+    "Step Ups": {
+      "reason": "The library has only Dumbbell Step Up; a barbell step-up has no library name, so ask which implement.",
+      "candidates": [
+        "Dumbbell Step Up"
+      ]
+    },
+    "Step Up": {
+      "reason": "The library has only Dumbbell Step Up; a barbell step-up has no library name, so ask which implement.",
+      "candidates": [
+        "Dumbbell Step Up"
+      ]
+    },
+    "Weighted Step-Ups": {
+      "reason": "The library has only Dumbbell Step Up; a barbell step-up has no library name, so ask which implement.",
+      "candidates": [
+        "Dumbbell Step Up"
+      ]
+    },
+    "Weighted Step Ups": {
+      "reason": "The library has only Dumbbell Step Up; a barbell step-up has no library name, so ask which implement.",
+      "candidates": [
+        "Dumbbell Step Up"
+      ]
+    },
+    "Split Squat": {
+      "reason": "Ambiguous: several split squat variations fit.",
+      "candidates": [
+        "Bulgarian Split Squat",
+        "Dumbbell Split Squat"
+      ]
+    },
+    "Split Squats": {
+      "reason": "Ambiguous: several split squat variations fit.",
+      "candidates": [
+        "Bulgarian Split Squat",
+        "Dumbbell Split Squat"
+      ]
+    },
+    "Any Split Squat Variation": {
+      "reason": "Ambiguous: several split squat variations fit.",
+      "candidates": [
+        "Bulgarian Split Squat",
+        "Dumbbell Split Squat"
+      ]
+    },
+    "GHD Sit-Ups": {
+      "reason": "No library name, and an alias called 'GHD Sit Up' scores 0.8 against Sit Up (LB-2).",
+      "candidates": [
+        "Sit Up",
+        "Decline Crunch"
+      ]
+    },
+    "GHD Sit-Up": {
+      "reason": "No library name, and an alias called 'GHD Sit Up' scores 0.8 against Sit Up (LB-2).",
+      "candidates": [
+        "Sit Up",
+        "Decline Crunch"
+      ]
+    },
+    "GHD Sit Ups": {
+      "reason": "No library name, and an alias called 'GHD Sit Up' scores 0.8 against Sit Up (LB-2).",
+      "candidates": [
+        "Sit Up",
+        "Decline Crunch"
+      ]
+    },
+    "GHD Situps": {
+      "reason": "No library name, and an alias called 'GHD Sit Up' scores 0.8 against Sit Up (LB-2).",
+      "candidates": [
+        "Sit Up",
+        "Decline Crunch"
+      ]
+    },
+    "GHD Back Extension": {
+      "reason": "Two library names fit.",
+      "candidates": [
+        "Back Extension",
+        "Hyperextension"
+      ]
+    },
+    "GHD Back Extensions": {
+      "reason": "Two library names fit.",
+      "candidates": [
+        "Back Extension",
+        "Hyperextension"
+      ]
+    },
+    "Adductor": {
+      "reason": "May be the adductor machine or a Copenhagen plank.",
+      "candidates": [
+        "Hip Adduction Machine",
+        "Copenhagen Plank"
+      ]
+    },
+    "Adductors": {
+      "reason": "May be the adductor machine or a Copenhagen plank.",
+      "candidates": [
+        "Hip Adduction Machine",
+        "Copenhagen Plank"
+      ]
+    },
+    "DB Press": {
+      "reason": "Ambiguous: a bench press or a shoulder press.",
+      "candidates": [
+        "Dumbbell Bench Press",
+        "Dumbbell Shoulder Press"
+      ]
+    },
+    "Dumbbell Press": {
+      "reason": "Ambiguous: a bench press or a shoulder press.",
+      "candidates": [
+        "Dumbbell Bench Press",
+        "Dumbbell Shoulder Press"
+      ]
+    },
+    "Hack/Pendulum": {
+      "reason": "The lifter's choice of machine.",
+      "candidates": [
+        "Hack Squat",
+        "Pendulum Squat",
+        "Leg Press"
+      ]
+    },
+    "OR pendulum/leg press": {
+      "reason": "The lifter's choice of machine.",
+      "candidates": [
+        "Hack Squat",
+        "Pendulum Squat",
+        "Leg Press"
+      ]
+    },
+    "Curls": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Triceps": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Rear Delts": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Abs": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Triceps of your choice": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Abs of your choice": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "OHP of your choice": {
+      "reason": "Generic slot names, not exercises. Pick an exercise with substitutes().",
+      "candidates": []
+    },
+    "Band Pull-Aparts": {
+      "reason": "Warm-up drill; warm-ups are not import rows (IL-28). No library name.",
+      "candidates": [
+        "Face Pull",
+        "Rear Delt Fly"
+      ]
+    },
+    "Banded Pull-Aparts": {
+      "reason": "Warm-up drill; warm-ups are not import rows (IL-28). No library name.",
+      "candidates": [
+        "Face Pull",
+        "Rear Delt Fly"
+      ]
+    },
+    "Band Pull Apart": {
+      "reason": "Warm-up drill; warm-ups are not import rows (IL-28). No library name.",
+      "candidates": [
+        "Face Pull",
+        "Rear Delt Fly"
+      ]
+    },
+    "BW Good Mornings": {
+      "reason": "Warm-up drill. The library's Good Morning is a barbell lift.",
+      "candidates": [
+        "Good Morning"
+      ]
+    },
+    "Bodyweight Good Morning": {
+      "reason": "Warm-up drill. The library's Good Morning is a barbell lift.",
+      "candidates": [
+        "Good Morning"
+      ]
+    },
+    "Tibialis Raise": {
+      "reason": "LB-9 examples with no library name. No alias is drafted for them.",
+      "candidates": []
+    },
+    "Reverse Hyper": {
+      "reason": "LB-9 examples with no library name. No alias is drafted for them.",
+      "candidates": []
+    }
+  }
+}

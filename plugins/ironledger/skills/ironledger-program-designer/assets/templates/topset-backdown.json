@@ -1,0 +1,470 @@
+{
+  "schema": "designer-template/1",
+  "id": "topset-backdown",
+  "name": "Top set and back-downs for meet prep (PREP 2, then PEAK)",
+  "engine": "topset",
+  "client_types": [
+    "PLM"
+  ],
+  "default_days": 4,
+  "rules": [
+    "CT-PLM-1",
+    "CT-PLM-3",
+    "CT-PLM-4",
+    "CT-PLM-5",
+    "CT-PLM-6",
+    "CT-PLM-11",
+    "CT-PLM-12",
+    "CT-PLM-13",
+    "CT-PLM-14",
+    "CT-PLM-20",
+    "L-4",
+    "L-16",
+    "IL-18"
+  ],
+  "decisions_relied_on": [
+    "M2",
+    "M6",
+    "M8",
+    "M9",
+    "M10",
+    "M12",
+    "M13"
+  ],
+  "equipment_required": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "rest": {
+    "topset": "Rest 3-5 min",
+    "backdown": "Rest 2 min",
+    "supplemental": "Rest 2 min"
+  },
+  "weekly_step_kg": {
+    "Squat": 5,
+    "Bench Press": 5,
+    "Deadlift": 7.5
+  },
+  "weekly_step_source": "CT-PLM-3: the step is the chart's rise from the first to the last loading week, spread evenly and rounded up to the load step (L-4), capped at these values (squat 5, bench 5, deadlift 7.5 kg a week). A fixed kg step would outrun the RPE target for a lighter lifter.",
+  "chart": "L-1's Epley inverted at reps + RIR: e1RM / (1 + 0.0333 x (reps + 10 - RPE)). The designer has no other RPE chart (CT-PLM-3).",
+  "variant": {
+    "exercise": "Close Grip Bench Press",
+    "of": "Bench Press",
+    "pct": 0.875,
+    "sets": 3,
+    "source": "The close-grip bench midpoint is 87.5% of the same week's competition-bench midpoint"
+  },
+  "phases": {
+    "prep2": {
+      "name": "PREP 2",
+      "source": "CT-PLM-6: 4 loading weeks plus a deload; PREP 2 reps (squat 3, 3, 2, 2; bench and deadlift 3, 2, 2, 2)",
+      "weeks": [
+        {
+          "week": 1,
+          "kind": "loading",
+          "reps": {
+            "Squat": "3",
+            "Bench Press": "3",
+            "Deadlift": "3"
+          },
+          "variant_reps": "5"
+        },
+        {
+          "week": 2,
+          "kind": "loading",
+          "reps": {
+            "Squat": "3",
+            "Bench Press": "2",
+            "Deadlift": "2"
+          },
+          "variant_reps": "5"
+        },
+        {
+          "week": 3,
+          "kind": "loading",
+          "reps": {
+            "Squat": "2",
+            "Bench Press": "2",
+            "Deadlift": "2"
+          },
+          "variant_reps": "4"
+        },
+        {
+          "week": 4,
+          "kind": "loading",
+          "reps": {
+            "Squat": "2",
+            "Bench Press": "2",
+            "Deadlift": "2"
+          },
+          "variant_reps": "4"
+        },
+        {
+          "week": 5,
+          "kind": "deload"
+        }
+      ],
+      "rpe_start": 7.5,
+      "peak": false,
+      "backdown": {
+        "pct": 0.88,
+        "reps": "3",
+        "rir": "3-5",
+        "sets": {
+          "Squat": 2,
+          "Bench Press": 3,
+          "Deadlift": 2
+        },
+        "source": "CT-PLM-4: x 0.88 to 0.89 in 3 to 5-rep blocks; PREP 2 back-downs are 3 reps"
+      },
+      "deload": {
+        "sets": 3,
+        "reps": "3",
+        "rpe": "6-7",
+        "chart_rpe": 6.5,
+        "variant_sets": 2,
+        "variant_reps": "5",
+        "variant_pct": 0.88,
+        "source": "CT-PLM-6: 2 to 3 sets x 3 at RPE 6 to 7, no back-downs; the close-grip bench drops to about 88% of its week-4 load"
+      }
+    },
+    "peak": {
+      "name": "PEAK",
+      "source": "CT-PLM-6: PEAK (2, then 1, then OPENER), no deload, straight into the taper",
+      "weeks": [
+        {
+          "week": 1,
+          "kind": "loading",
+          "reps": {
+            "Squat": "2",
+            "Bench Press": "2",
+            "Deadlift": "2"
+          },
+          "variant_reps": "4"
+        },
+        {
+          "week": 2,
+          "kind": "loading",
+          "reps": {
+            "Squat": "1",
+            "Bench Press": "1",
+            "Deadlift": "1"
+          },
+          "variant_reps": "4"
+        },
+        {
+          "week": 3,
+          "kind": "loading",
+          "reps": {
+            "Squat": "1",
+            "Bench Press": "1",
+            "Deadlift": "1"
+          },
+          "variant_reps": "3"
+        },
+        {
+          "week": 4,
+          "kind": "opener",
+          "variant_reps": "4"
+        }
+      ],
+      "rpe_start": 8.0,
+      "peak": true,
+      "accessory_weeks": [
+        1,
+        2
+      ],
+      "backdown": {
+        "pct": 0.92,
+        "reps": "2",
+        "rir": "3-5",
+        "sets": {
+          "Squat": 2,
+          "Bench Press": 2,
+          "Deadlift": 2
+        },
+        "source": "CT-PLM-4: x 0.91 to 0.93 in PEAK; PEAK back-downs are 2 reps"
+      },
+      "opener": {
+        "held_back": {
+          "Squat": "OPENER",
+          "Bench Press": "SECOND",
+          "Deadlift": "OPENER"
+        },
+        "backdown_pct_of_prev": 0.82,
+        "backdown_reps": "3",
+        "backdown_sets": 2,
+        "source": "CT-PLM-14 and CT-PLM-20: OPENER and SECOND are the lifter's to choose (ironledger-meet-attempts); the OPENER-week back-downs sit at about 82% of the previous week's top-set midpoint"
+      }
+    }
+  },
+  "layouts": {
+    "4": {
+      "source": "Squat, bench, deadlift, then a second bench day (close grip)",
+      "days": [
+        {
+          "label": "Squat",
+          "topsets": [
+            "Squat"
+          ],
+          "slots": [
+            {
+              "id": "sq.machine",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Hack Squat",
+              "alternatives": [
+                "Pendulum Squat",
+                "Leg Press",
+                "Belt Squat"
+              ],
+              "sets": 2,
+              "reps": "6-8",
+              "base_rir": 1
+            },
+            {
+              "id": "sq.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Bulgarian Split Squat",
+              "alternatives": [
+                "Dumbbell Split Squat",
+                "Dumbbell Lunge"
+              ],
+              "sets": 2,
+              "reps": "8-10",
+              "base_rir": 2
+            },
+            {
+              "id": "sq.knee",
+              "pattern": "knee-extension",
+              "kind": "isolation",
+              "exercise": "Leg Extension",
+              "alternatives": [
+                "Sissy Squat"
+              ],
+              "sets": 2,
+              "reps": "10-15",
+              "base_rir": 1
+            },
+            {
+              "id": "sq.trunk",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Cable Crunch",
+              "alternatives": [
+                "Cable Woodchop",
+                "Hanging Knee Raise"
+              ],
+              "sets": 2,
+              "reps": "12-15",
+              "base_rir": 1
+            }
+          ]
+        },
+        {
+          "label": "Bench",
+          "topsets": [
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "bp.press",
+              "pattern": "incline-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Incline Press",
+              "alternatives": [
+                "Dumbbell Bench Press",
+                "Machine Chest Press"
+              ],
+              "sets": 2,
+              "reps": "6-10",
+              "base_rir": 2
+            },
+            {
+              "id": "bp.shoulder",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Machine Shoulder Press",
+              "alternatives": [
+                "Seated Dumbbell Press",
+                "Dumbbell Shoulder Press"
+              ],
+              "sets": 2,
+              "reps": "8-10",
+              "base_rir": 1
+            },
+            {
+              "id": "bp.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Chest Supported Row",
+              "alternatives": [
+                "Machine Row",
+                "Seal Row"
+              ],
+              "sets": 2,
+              "reps": "8-12",
+              "base_rir": 1
+            },
+            {
+              "id": "bp.delts",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Cable Lateral Raise",
+                "Machine Lateral Raise"
+              ],
+              "sets": 2,
+              "reps": "12-15",
+              "base_rir": 1
+            },
+            {
+              "id": "bp.triceps",
+              "pattern": "elbow-extension",
+              "kind": "isolation",
+              "exercise": "Cable Tricep Pushdown",
+              "alternatives": [
+                "Rope Pushdown",
+                "Overhead Cable Extension"
+              ],
+              "sets": 2,
+              "reps": "10-12",
+              "base_rir": 1
+            }
+          ]
+        },
+        {
+          "label": "Deadlift",
+          "topsets": [
+            "Deadlift"
+          ],
+          "slots": [
+            {
+              "id": "dl.machine",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Leg Press",
+              "alternatives": [
+                "Hack Squat",
+                "Pendulum Squat",
+                "Belt Squat"
+              ],
+              "sets": 2,
+              "reps": "8-10",
+              "base_rir": 1
+            },
+            {
+              "id": "dl.hinge",
+              "pattern": "hip-hinge",
+              "kind": "compound",
+              "exercise": "Romanian Deadlift",
+              "alternatives": [
+                "Dumbbell Romanian Deadlift",
+                "Stiff Leg Deadlift"
+              ],
+              "sets": 2,
+              "reps": "8-10",
+              "base_rir": 2
+            },
+            {
+              "id": "dl.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Seated Leg Curl",
+              "alternatives": [
+                "Leg Curl",
+                "Lying Leg Curl"
+              ],
+              "sets": 2,
+              "reps": "10-12",
+              "base_rir": 1
+            },
+            {
+              "id": "dl.adductor",
+              "pattern": "hip adduction/abduction",
+              "kind": "isolation",
+              "exercise": "Hip Adduction Machine",
+              "alternatives": [
+                "Cable Woodchop"
+              ],
+              "sets": 2,
+              "reps": "12-15",
+              "base_rir": 1
+            }
+          ]
+        },
+        {
+          "label": "Close grip",
+          "variant": true,
+          "slots": [
+            {
+              "id": "cg.overhead",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Seated Dumbbell Press",
+              "alternatives": [
+                "Machine Shoulder Press",
+                "Dumbbell Shoulder Press"
+              ],
+              "sets": 2,
+              "reps": "8-10",
+              "base_rir": 2
+            },
+            {
+              "id": "cg.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Lat Pulldown",
+              "alternatives": [
+                "Neutral Grip Lat Pulldown",
+                "Chin Up"
+              ],
+              "sets": 2,
+              "reps": "8-12",
+              "base_rir": 1
+            },
+            {
+              "id": "cg.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Seated Cable Row",
+              "alternatives": [
+                "Machine Row",
+                "Chest Supported Row"
+              ],
+              "sets": 2,
+              "reps": "8-12",
+              "base_rir": 1
+            },
+            {
+              "id": "cg.arms",
+              "pattern": "elbow-flexion",
+              "kind": "isolation",
+              "exercise": "Dumbbell Curl",
+              "alternatives": [
+                "Hammer Curl",
+                "Cable Curl"
+              ],
+              "sets": 2,
+              "reps": "10-12",
+              "base_rir": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-PLM-2: this template needs 4 or more weeks of logged RPE or RIR ratings; otherwise the lifter stays on 5/3/1 and this is offered as the alternative.",
+    "CT-PLM-3: week 1's range is centred on the load the chart gives for that week's reps at its RPE target from the current e1RM; weeks 2 to 4 raise the midpoint by the weekly step (the chart's rise, capped per lift). Logged top sets move later weeks only through an IL-20 re-issue.",
+    "CT-PLM-5, CT-PLM-20: the top-set RPE rises about 0.25 a week (7.5, 7.5-8, 8, 8-8.5 in PREP 2) and is written as RIR (2-3, 2-3, 2, 1-2).",
+    "CT-PLM-13: accessory RIR steps down from week 1's base (weeks 2 and 3 at 0.5 below, week 4 at 1 below, deload at 1 above and at least 3). Free-weight compounds start at RIR 2 so they never reach 0 (A-7).",
+    "CT-PLM-6: an 8 to 12-week prep is PREP 2 then PEAK; a shortened PREP 2 is flagged to the lifter. PEAK is generated as its own block (phase 'peak') from the e1RMs PREP 2 produced.",
+    "CT-PLM-11: PEAK keeps accessories in its first 2 weeks only; the competition lifts and the close-grip bench carry on.",
+    "Main-lift warm-ups are not computed: L-6 is a 5/3/1 rule. The movement prep in the hand-over covers it (P-19).",
+    "CT-PLM-15 to CT-PLM-19 (attempt band, taper timing, weigh-in, class and any cut) are not part of this program (attempts: the ironledger-meet-attempts skill; any weight cut: a coach or sports dietitian)."
+  ]
+}

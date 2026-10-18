@@ -1,0 +1,839 @@
+{
+  "schema": "designer-template/1",
+  "id": "pt-general",
+  "name": "General and injury-aware training",
+  "engine": "fixed",
+  "client_types": [
+    "PT",
+    "GEN",
+    "HYP"
+  ],
+  "any_type_without": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "default_days": 3,
+  "rules": [
+    "CT-PT-1",
+    "CT-PT-2",
+    "CT-PT-3",
+    "CT-PT-8",
+    "CT-NOV-2",
+    "CT-SEL-8",
+    "A-4",
+    "A-6",
+    "A-8",
+    "L-7",
+    "L-8",
+    "P-13"
+  ],
+  "decisions_relied_on": [
+    "M4",
+    "M8",
+    "M11",
+    "M12",
+    "M13",
+    "M20"
+  ],
+  "equipment_required": [],
+  "weeks": [
+    {
+      "week": 1,
+      "kind": "loading"
+    },
+    {
+      "week": 2,
+      "kind": "loading"
+    },
+    {
+      "week": 3,
+      "kind": "loading"
+    },
+    {
+      "week": 4,
+      "kind": "deload"
+    }
+  ],
+  "layouts": {
+    "3": {
+      "source": "Hinge and posterior, upper, knee-dominant",
+      "days": [
+        {
+          "label": "Hinge",
+          "extras": [
+            "Warm-up: hinge mobility"
+          ],
+          "slots": [
+            {
+              "id": "h.hinge",
+              "pattern": "hip-hinge",
+              "kind": "compound",
+              "exercise": "Romanian Deadlift",
+              "alternatives": [
+                "Dumbbell Romanian Deadlift",
+                "Cable Pull Through",
+                "Back Extension"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "h.glute",
+              "pattern": "hip-extension",
+              "kind": "compound",
+              "exercise": "Hip Thrust",
+              "alternatives": [
+                "Dumbbell Hip Thrust",
+                "Glute Bridge",
+                "Cable Pull Through"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "2"
+            },
+            {
+              "id": "h.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Leg Curl",
+              "alternatives": [
+                "Seated Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "h.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Dumbbell Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Seated Cable Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "h.core",
+              "pattern": "anti-rotation",
+              "kind": "core",
+              "exercise": "Pallof Press",
+              "alternatives": [
+                "Dead Bug",
+                "Russian Twist"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            },
+            {
+              "id": "h.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        },
+        {
+          "label": "Upper",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "slots": [
+            {
+              "id": "u.press",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Bench Press",
+              "alternatives": [
+                "Machine Chest Press",
+                "Dumbbell Incline Press",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "u.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Lat Pulldown",
+              "alternatives": [
+                "Chin Up",
+                "Pull Up",
+                "Neutral Grip Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "u.overhead",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Shoulder Press",
+              "alternatives": [
+                "Seated Dumbbell Press",
+                "Machine Shoulder Press",
+                "Arnold Press"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "u.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Seated Cable Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Dumbbell Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "u.rear",
+              "pattern": "shoulder-horizontal-abduction",
+              "kind": "isolation",
+              "exercise": "Face Pull",
+              "alternatives": [
+                "Rear Delt Fly",
+                "Cable Rear Delt Fly",
+                "Reverse Pec Deck"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "1"
+            },
+            {
+              "id": "u.core",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Dead Bug",
+              "alternatives": [
+                "Pallof Press",
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        },
+        {
+          "label": "Knee",
+          "extras": [
+            "Warm-up: knee mobility"
+          ],
+          "slots": [
+            {
+              "id": "k.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Goblet Squat",
+              "alternatives": [
+                "Box Squat",
+                "Leg Press",
+                "Kettlebell Squat"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.press",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Leg Press",
+              "alternatives": [
+                "Hack Squat",
+                "Belt Squat",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Dumbbell Split Squat",
+              "alternatives": [
+                "Dumbbell Lunge",
+                "Bulgarian Split Squat",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Seated Leg Curl",
+              "alternatives": [
+                "Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "k.calf",
+              "pattern": "ankle-plantarflexion",
+              "kind": "isolation",
+              "exercise": "Standing Calf Raise",
+              "alternatives": [
+                "Seated Calf Raise",
+                "Dumbbell Calf Raise",
+                "Bodyweight Calf Raise"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "1"
+            },
+            {
+              "id": "k.core",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Plank",
+              "alternatives": [
+                "Side Plank"
+              ],
+              "sets": 3,
+              "reps": "30",
+              "rir": "3",
+              "basis": "Reps in seconds"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "source": "CT-PT-1 (days exactly as the lifter says) and CT-NOV-2 (2 to 3 full-body days): two full-body days",
+      "days": [
+        {
+          "label": "Full body A",
+          "extras": [
+            "Warm-up: knee mobility"
+          ],
+          "slots": [
+            {
+              "id": "a.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Goblet Squat",
+              "alternatives": [
+                "Box Squat",
+                "Leg Press",
+                "Kettlebell Squat"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "a.hinge",
+              "pattern": "hip-hinge",
+              "kind": "compound",
+              "exercise": "Romanian Deadlift",
+              "alternatives": [
+                "Dumbbell Romanian Deadlift",
+                "Cable Pull Through",
+                "Back Extension"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "a.press",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Bench Press",
+              "alternatives": [
+                "Machine Chest Press",
+                "Dumbbell Incline Press",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "a.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Lat Pulldown",
+              "alternatives": [
+                "Chin Up",
+                "Pull Up",
+                "Neutral Grip Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "a.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Leg Curl",
+              "alternatives": [
+                "Seated Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "a.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        },
+        {
+          "label": "Full body B",
+          "extras": [
+            "Warm-up: hinge mobility"
+          ],
+          "slots": [
+            {
+              "id": "b.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Leg Press",
+              "alternatives": [
+                "Hack Squat",
+                "Goblet Squat",
+                "Dumbbell Split Squat"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "b.glute",
+              "pattern": "hip-extension",
+              "kind": "compound",
+              "exercise": "Hip Thrust",
+              "alternatives": [
+                "Dumbbell Hip Thrust",
+                "Glute Bridge",
+                "Cable Pull Through"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "2"
+            },
+            {
+              "id": "b.overhead",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Shoulder Press",
+              "alternatives": [
+                "Seated Dumbbell Press",
+                "Machine Shoulder Press",
+                "Arnold Press"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "b.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Seated Cable Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Dumbbell Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "b.rear",
+              "pattern": "shoulder-horizontal-abduction",
+              "kind": "isolation",
+              "exercise": "Face Pull",
+              "alternatives": [
+                "Rear Delt Fly",
+                "Cable Rear Delt Fly",
+                "Reverse Pec Deck"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "1"
+            },
+            {
+              "id": "b.core",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Dead Bug",
+              "alternatives": [
+                "Pallof Press",
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "source": "CT-PT-1 (days exactly as the lifter says): hinge, push, knee, pull",
+      "days": [
+        {
+          "label": "Hinge",
+          "extras": [
+            "Warm-up: hinge mobility"
+          ],
+          "slots": [
+            {
+              "id": "h.hinge",
+              "pattern": "hip-hinge",
+              "kind": "compound",
+              "exercise": "Romanian Deadlift",
+              "alternatives": [
+                "Dumbbell Romanian Deadlift",
+                "Cable Pull Through",
+                "Back Extension"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "h.glute",
+              "pattern": "hip-extension",
+              "kind": "compound",
+              "exercise": "Hip Thrust",
+              "alternatives": [
+                "Dumbbell Hip Thrust",
+                "Glute Bridge",
+                "Cable Pull Through"
+              ],
+              "sets": 3,
+              "reps": "8-12",
+              "rir": "2"
+            },
+            {
+              "id": "h.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Leg Curl",
+              "alternatives": [
+                "Seated Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "h.core",
+              "pattern": "anti-rotation",
+              "kind": "core",
+              "exercise": "Pallof Press",
+              "alternatives": [
+                "Dead Bug",
+                "Russian Twist"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            },
+            {
+              "id": "h.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "3",
+              "basis": "Reps in metres"
+            }
+          ]
+        },
+        {
+          "label": "Push",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "slots": [
+            {
+              "id": "p.press",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Bench Press",
+              "alternatives": [
+                "Machine Chest Press",
+                "Dumbbell Incline Press",
+                "Push Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "p.overhead",
+              "pattern": "vertical-press",
+              "kind": "compound",
+              "exercise": "Dumbbell Shoulder Press",
+              "alternatives": [
+                "Seated Dumbbell Press",
+                "Machine Shoulder Press",
+                "Arnold Press"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "p.delts",
+              "pattern": "shoulder-abduction",
+              "kind": "isolation",
+              "exercise": "Lateral Raise",
+              "alternatives": [
+                "Cable Lateral Raise",
+                "Machine Lateral Raise"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "1"
+            },
+            {
+              "id": "p.triceps",
+              "pattern": "elbow-extension",
+              "kind": "isolation",
+              "exercise": "Cable Tricep Pushdown",
+              "alternatives": [
+                "Rope Pushdown",
+                "Dumbbell Tricep Extension",
+                "Overhead Cable Extension"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "p.core",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Dead Bug",
+              "alternatives": [
+                "Pallof Press",
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        },
+        {
+          "label": "Knee",
+          "extras": [
+            "Warm-up: knee mobility"
+          ],
+          "slots": [
+            {
+              "id": "k.squat",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Goblet Squat",
+              "alternatives": [
+                "Box Squat",
+                "Leg Press",
+                "Kettlebell Squat"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.press",
+              "pattern": "squat",
+              "kind": "compound",
+              "exercise": "Leg Press",
+              "alternatives": [
+                "Hack Squat",
+                "Belt Squat",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Dumbbell Split Squat",
+              "alternatives": [
+                "Dumbbell Lunge",
+                "Bulgarian Split Squat",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "k.hamstring",
+              "pattern": "knee-flexion",
+              "kind": "isolation",
+              "exercise": "Seated Leg Curl",
+              "alternatives": [
+                "Leg Curl",
+                "Lying Leg Curl",
+                "Nordic Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "k.core",
+              "pattern": "anti-extension",
+              "kind": "core",
+              "exercise": "Plank",
+              "alternatives": [
+                "Side Plank"
+              ],
+              "sets": 3,
+              "reps": "30",
+              "rir": "3",
+              "basis": "Reps in seconds"
+            }
+          ]
+        },
+        {
+          "label": "Pull",
+          "extras": [
+            "Warm-up: upper mobility"
+          ],
+          "slots": [
+            {
+              "id": "l.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Lat Pulldown",
+              "alternatives": [
+                "Chin Up",
+                "Pull Up",
+                "Neutral Grip Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "l.row",
+              "pattern": "horizontal-pull",
+              "kind": "compound",
+              "exercise": "Seated Cable Row",
+              "alternatives": [
+                "Chest Supported Row",
+                "Dumbbell Row",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "2"
+            },
+            {
+              "id": "l.rear",
+              "pattern": "shoulder-horizontal-abduction",
+              "kind": "isolation",
+              "exercise": "Face Pull",
+              "alternatives": [
+                "Rear Delt Fly",
+                "Cable Rear Delt Fly",
+                "Reverse Pec Deck"
+              ],
+              "sets": 3,
+              "reps": "12-15",
+              "rir": "1"
+            },
+            {
+              "id": "l.biceps",
+              "pattern": "elbow-flexion",
+              "kind": "isolation",
+              "exercise": "Dumbbell Curl",
+              "alternatives": [
+                "Hammer Curl",
+                "Cable Curl",
+                "EZ Bar Curl"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "1"
+            },
+            {
+              "id": "l.core",
+              "pattern": "anti-rotation",
+              "kind": "core",
+              "exercise": "Cable Woodchop",
+              "alternatives": [
+                "Pallof Press",
+                "Russian Twist"
+              ],
+              "sets": 3,
+              "reps": "10-12",
+              "rir": "3"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-PT-1: 5 to 6 exercises x 3 sets, RIR 2 on compounds, RIR 1 on isolation, RIR 3 on core and carries, each day finishing with a carry or core exercise. A-3's AMRAP Last Set gives way to CT-PT-1's RIR 1 on isolation (G-20: the higher RIR wins).",
+    "CT-PT-3: an injury the lifter lists changes only the movements it aggravates. Swap those slots with choices, each with its reason in training terms (for example a box squat for a controlled knee depth).",
+    "CT-PT-8: every week is written out with a named progression (double progression, A-6), then an L-7 deload in week 4 (30 to 50% fewer sets, RIR + 1, at least 3).",
+    "CT-PT-2: each day opens with the mobility block for its pattern (knee, hinge or upper): 5 min rower or bike, three 1-set drills, then Shoulder Big 3 1 x 15 each.",
+    "CT-SEL-8: a lifter without a barbell, rack and bench comes here whatever the primary type; each equipment swap is listed in the draft notes."
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "schema": "designer-template/1",
+  "id": "adf-prep",
+  "name": "ADF pre-entry prep: 5/3/1 strength days plus 3 run days",
+  "engine": "531",
+  "client_types": [
+    "ADF"
+  ],
+  "default_days": 5,
+  "rules": [
+    "CT-ADF-4",
+    "CT-ADF-5",
+    "CT-ADF-6",
+    "CT-ADF-8",
+    "CT-ADF-9",
+    "CT-ADF-11",
+    "CT-ADF-14",
+    "CT-CON-4",
+    "CT-RUN-1",
+    "CT-RUN-3",
+    "CT-RUN-4",
+    "CT-RUN-5",
+    "IL-28",
+    "L-5",
+    "L-6",
+    "L-7",
+    "L-8",
+    "L-14"
+  ],
+  "decisions_relied_on": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7",
+    "M9",
+    "M11",
+    "M12",
+    "M13",
+    "M16",
+    "M18"
+  ],
+  "equipment_required": [
+    "barbell",
+    "rack",
+    "bench"
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "kind": "loading",
+      "wave": 1
+    },
+    {
+      "week": 2,
+      "kind": "loading",
+      "wave": 2
+    },
+    {
+      "week": 3,
+      "kind": "loading",
+      "wave": 3
+    },
+    {
+      "week": 4,
+      "kind": "deload"
+    }
+  ],
+  "rest": {
+    "main": "Rest 3 min",
+    "main_heavy": "Rest 3-5 min",
+    "supplemental": "Rest 2 min"
+  },
+  "amrap": {
+    "rir": "1-2",
+    "cue": "as many strong reps as you can, leaving 1 to 2 in the tank"
+  },
+  "supplemental": null,
+  "layouts": {
+    "5": {
+      "source": "CT-ADF-5: 2 strength days and 3 run days (intervals, shuttle, easy run); runs are IL-28 extras, never import rows",
+      "days": [
+        {
+          "main": [
+            "Squat",
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "a.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Pull Up",
+              "alternatives": [
+                "Chin Up",
+                "Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "5-8",
+              "rir": "2"
+            },
+            {
+              "id": "a.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "a.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Intervals",
+          "extras": [
+            "Intervals: 6 x 400 m, 2 min rest between"
+          ],
+          "extras_by_week": {
+            "4": [
+              "Intervals: 4 x 400 m, 2 min rest between"
+            ]
+          }
+        },
+        {
+          "main": [
+            "Deadlift",
+            "Overhead Press"
+          ],
+          "slots": [
+            {
+              "id": "b.platform",
+              "pattern": "power",
+              "kind": "compound",
+              "exercise": "Power Clean",
+              "alternatives": [
+                "Kettlebell Clean",
+                "Dumbbell Thruster"
+              ],
+              "sets": 3,
+              "reps": "3",
+              "rir": "3",
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "b.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Pull Up",
+              "alternatives": [
+                "Chin Up",
+                "Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "5-8",
+              "rir": "2"
+            },
+            {
+              "id": "b.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "2",
+              "basis": "Reps in metres"
+            },
+            {
+              "id": "b.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "b.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Shuttle",
+          "extras": [
+            "Shuttle practice: 20 m turns at test pace",
+            "Push-up and sit-up test to the exact standard"
+          ],
+          "extras_by_week": {
+            "4": [
+              "Mock PFA to the exact standard: push-ups, sit-ups, shuttle"
+            ]
+          }
+        },
+        {
+          "label": "Easy run",
+          "extras": [
+            "Then: easy run 25 min"
+          ],
+          "extras_by_week": {
+            "2": [
+              "Then: easy run 30 min"
+            ],
+            "3": [
+              "Then: easy run 35 min"
+            ],
+            "4": [
+              "Then: easy run 25 min"
+            ]
+          },
+          "slots": [
+            {
+              "id": "c.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "c.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "source": "CT-ADF-5: 3 strength days and 3 run days; the third strength day is a full-body accessory day (CT-GEN-2's pattern)",
+      "days": [
+        {
+          "main": [
+            "Squat",
+            "Bench Press"
+          ],
+          "slots": [
+            {
+              "id": "a.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Pull Up",
+              "alternatives": [
+                "Chin Up",
+                "Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "5-8",
+              "rir": "2"
+            },
+            {
+              "id": "a.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "a.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Intervals",
+          "extras": [
+            "Intervals: 6 x 400 m, 2 min rest between"
+          ],
+          "extras_by_week": {
+            "4": [
+              "Intervals: 4 x 400 m, 2 min rest between"
+            ]
+          }
+        },
+        {
+          "main": [
+            "Deadlift",
+            "Overhead Press"
+          ],
+          "slots": [
+            {
+              "id": "b.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Pull Up",
+              "alternatives": [
+                "Chin Up",
+                "Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "5-8",
+              "rir": "2"
+            },
+            {
+              "id": "b.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "b.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Shuttle",
+          "extras": [
+            "Shuttle practice: 20 m turns at test pace",
+            "Push-up and sit-up test to the exact standard"
+          ],
+          "extras_by_week": {
+            "4": [
+              "Mock PFA to the exact standard: push-ups, sit-ups, shuttle"
+            ]
+          }
+        },
+        {
+          "label": "Full body",
+          "slots": [
+            {
+              "id": "c.platform",
+              "pattern": "power",
+              "kind": "compound",
+              "exercise": "Power Clean",
+              "alternatives": [
+                "Kettlebell Clean",
+                "Dumbbell Thruster"
+              ],
+              "sets": 3,
+              "reps": "3",
+              "rir": "3",
+              "rest": "Rest 2 min"
+            },
+            {
+              "id": "c.unilateral",
+              "pattern": "squat-unilateral",
+              "kind": "compound",
+              "exercise": "Dumbbell Split Squat",
+              "alternatives": [
+                "Dumbbell Lunge",
+                "Bulgarian Split Squat",
+                "Dumbbell Step Up"
+              ],
+              "sets": 3,
+              "reps": "8-10",
+              "rir": "2"
+            },
+            {
+              "id": "c.pull",
+              "pattern": "vertical-pull",
+              "kind": "compound",
+              "exercise": "Chin Up",
+              "alternatives": [
+                "Pull Up",
+                "Lat Pulldown",
+                "Inverted Row"
+              ],
+              "sets": 3,
+              "reps": "5-8",
+              "rir": "2"
+            },
+            {
+              "id": "c.carry",
+              "pattern": "carry",
+              "kind": "carry",
+              "exercise": "Farmer's Walk",
+              "alternatives": [],
+              "sets": 3,
+              "reps": "40",
+              "rir": "2",
+              "basis": "Reps in metres"
+            },
+            {
+              "id": "c.pushup",
+              "pattern": "horizontal-press",
+              "kind": "compound",
+              "exercise": "Push Up",
+              "alternatives": [
+                "Incline Push Up"
+              ],
+              "sets": 3,
+              "reps": "5-10",
+              "rir": "2-3"
+            },
+            {
+              "id": "c.situp",
+              "pattern": "trunk-flexion",
+              "kind": "core",
+              "exercise": "Sit Up",
+              "alternatives": [
+                "Crunch"
+              ],
+              "sets": 3,
+              "reps": "10-20",
+              "rir": "2-3"
+            }
+          ]
+        },
+        {
+          "label": "Easy run",
+          "extras": [
+            "Easy run 25 min"
+          ],
+          "extras_by_week": {
+            "2": [
+              "Easy run 30 min"
+            ],
+            "3": [
+              "Easy run 35 min"
+            ],
+            "4": [
+              "Easy run 25 min"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "notes": [
+    "CT-ADF-1, CT-ADF-2: the hand-over names the service, role, exact PFA standard with its fetch date (ADF Careers, fetched 2026-09-23) and the PFA date; the plan peaks for the PFA, not enlistment. CT-ADF-4: targets are 1 shuttle level and about 25% more push-ups and sit-ups than the standard.",
+    "CT-ADF-6, CT-ADF-7, CT-ADF-8: push-ups and sit-ups are practised to the exact test technique 3 times a week, stopped 2 to 3 reps short. Use Incline Push Up until the lifter meets the standard. Cadence, time limit and beep-test version: confirm with Defence Force Recruiting.",
+    "CT-ADF-11: a mock PFA runs before the program starts (week 0) and replaces week 4's shuttle session; week 4 is also the L-7 deload and the lighter running week (CT-RUN-4).",
+    "CT-RUN-4: run volumes are defaults (the easy run grows 25, 30, 35 min, at most 20% a week, then 25). Set them from the lifter's current running; female candidates and novice runners stay at 20% or less a week (CT-ADF-13).",
+    "CT-CON-4, CT-RUN-3: hard runs (intervals, shuttle) sit on non-lifting days; nothing fast follows strength work on the same day.",
+    "CT-ADF-9: squat, hinge, pull-ups, a lift to a platform (Power Clean) and loaded carries every week. CT-ADF-14: Special Forces candidates need pull-ups 3 times a week, which the 6-day layout gives.",
+    "CT-ADF-10: load carriage is optional and not drafted; if added, at most 1 session every 10 to 14 days."
+  ]
+}
